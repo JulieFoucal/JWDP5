@@ -4,7 +4,7 @@ fetch(API)
     .then((response) => response.json())
     .then((teddies) => {
         console.log(teddies);
-        const container = document.querySelector(".container");
+        const container = document.querySelector(".container1");
         for (const teddy of teddies) {
             container.innerHTML += `
 <div class="card">

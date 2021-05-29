@@ -126,24 +126,23 @@ body {
 }
 
 .footer {
-    font-size: 1em;
-    width: 98%;
-    margin-right:0px;
-    padding-right: 0px;
-}
-
-.colonnes {
-    background-color: rgb(188, 188, 214);
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin: 0;
+    font-size: 1em;
+    width: 98%;
+    margin:0;
     padding: 0;
 }
 
+.colonnes {
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+
 .colonne1 {
-    width: 50%;
-    padding-left: 10px;
+    width: 40%;
 }
 
 .colonne2 {
@@ -159,9 +158,9 @@ body {
 
 /*page produit article*/
 
-.grandcontainer{
-    width:100%;
-    height:30vw;
+.grandcontainer {
+    width: 100%;
+    height: 30vw;
     align-items: center;
     padding-top: 120px;
 }
@@ -173,7 +172,7 @@ body {
     margin-left: 30px;
     height: 4vw;
     margin-bottom: 15px;
-    margin-top:15px ;
+    margin-top: 15px;
     border-radius: 24px 24px 24px 24px;
 }
 
@@ -318,10 +317,12 @@ body {
     height: auto;
     border-radius: 25px;
 }
+
 .articles-container {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
+
 .teddy-container {
     display: inline-grid;
     width: 40%;
@@ -332,6 +333,7 @@ body {
     background-color: #F1F0F0;
     border-radius: 25px;
 }
+
 .teddy-info {
     display: flex;
     justify-content: space-between;
@@ -339,6 +341,7 @@ body {
     margin-right: 15px;
     margin-top: 20px;
 }
+
 .btnAdd {
     width: fit-content;
     height: fit-content;
@@ -346,11 +349,12 @@ body {
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 20px;
-    padding : 10px;
+    padding: 10px;
     border-radius: 15px;
     background-color: #DF7D7D;
     color: white;
 }
+
 .btnShow {
     width: fit-content;
     height: fit-content;
@@ -358,12 +362,14 @@ body {
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 20px;
-    padding : 10px;
+    padding: 10px;
     border-radius: 15px;
     background-color: #DF7D7D;
     color: white;
 }
-.teddy, .teddy-pic {
+
+.teddy,
+.teddy-pic {
     width: 95%;
     height: 265px;
     text-align: center;
@@ -371,58 +377,73 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
 /* Footer */
 footer {
     margin-top: 40px;
     background-color: rgb(245, 245, 245);
 }
+
 .colonnes {
     margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
 }
-.colonne1, .colonne2, .colonne3{
+
+.colonne1,
+.colonne2,
+.colonne3 {
     margin-right: 135px;
 }
+
 ul {
     list-style: none;
     padding: 0;
 }
+
 li>a {
     text-decoration-line: underline;
     font-size: 12px;
 }
+
 a {
     text-decoration: none;
     color: #6D6D6D;
 }
+
 /* Styles p2 */
 .section {
     margin-top: 30px;
 }
+
 .selected-product {
     width: 100%;
     height: 100%;
     /* background-color: #F2EAEA; */
     border-radius: 25px;
 }
+
 .scnd-teddy-container {
     width: 100%;
     height: 90%;
 }
+
 .scnd-teddy {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
 }
+
 .scnd-teddy-info {
     display: flex;
 }
+
 .scnd-teddy-name {
     margin-left: 31%;
     margin-right: auto;
     width: fit-content;
 }
+
 .scnd-price {
     margin-right: 31%;
     margin-left: auto;
@@ -430,11 +451,13 @@ a {
     margin-top: 26px;
     margin-bottom: 20px;
 }
+
 .scnd-teddy-pic {
     width: 100%;
     border-radius: 25px;
     margin-top: 20px;
 }
+
 .description {
     font-family: 'Lora', serif;
     color: #595959;
@@ -442,14 +465,17 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
 #form_2 {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
+
 .list {
     margin-top: 20px;
 }
+
 .link {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -457,6 +483,7 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
 /* Styles p3 */
 
 .p3-teddy-container {
@@ -467,16 +494,19 @@ a {
     margin-right: auto;
     width: 50%;
 }
+
 .p3-teddy {
     width: 52%;
     height: 185px;
     margin-right: 30px;
 }
+
 .p3-teddy-pic {
     width: 100%;
     height: 100%;
     border-radius: 25px;
 }
+
 .cart-header {
     margin-left: auto;
     margin-right: auto;
@@ -485,23 +515,27 @@ a {
     font-size: 20px;
     margin-bottom: 20px;
 }
+
 .order {
     margin-top: 25px;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
+
 .buy {
     width: 100%;
     border-top: 1px solid #BCBCBC;
     margin-top: 30px;
 }
+
 .label-margin {
     display: grid;
     row-gap: 5px;
     width: 340px;
     margin-bottom: 15px;
 }
+
 .bloc-button {
     display: block;
     background-color: #916B7F;
@@ -510,14 +544,16 @@ a {
     padding: 10px 108px;
     border-radius: 12px;
 }
+
 #form_1 {
     display: grid;
     width: fit-content;
     margin: auto;
 }
-.grandcontainer2{
-    width:100%;
-    height:40vw;
+
+.grandcontainer2 {
+    width: 100%;
+    height: 40vw;
     align-items: center;
     padding-top: 120px;
 }
