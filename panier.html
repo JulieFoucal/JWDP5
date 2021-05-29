@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<link>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Panier</title>
+<meta name="title" content="Accueil - Orinoco">
+<meta name="description" content="Orinoco le site e-commerce pour d'ours en peluche">
+<script src="https://kit.fontawesome.com/9157bc5015.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="CSS/style.css">
+
+<!--box icons-->
+<link rel=" stylesheet " href=" https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css ">
+</link>
+</head>
+<!-- HEADER -->
+<header class="header">
+    <div class="headercontainer">
+        <a href="/"><img class="logo" src="./images/logoorinco.png" alt="logo orinco"></a>
+    </div>
+    <nav class="paniercontainer">
+        <div class="iconpanier">
+            <a class="pagepanier" href="./panier.html"><i class="fas fa-cart-arrow-down lienpanier"></i></a>
+
+        </div>
+    </nav>
+</header>
+<!-- HEADER -->
+<div class="headerproduct">
+    <div class="retouraccueil">
+        <a class="accueil" href="./Index.html"><i class="fas fa-hand-point-left flecheicon"></i></a>
+    </div>
+
+    <div class="voirpanier">
+        <p class="voirmonpanier">/ Voir mon panier</p>
+    </div>
+
+</div>
+<body>
+    <div class="grandcontainer2">
+        <div class="cart-product">
+            <div class="cart-header">Résumé de l'article</div>
+            <article class="p3-teddy-container">
+                <div class="p3-teddy">
+                   <img class="p3-teddy-pic" src="" alt="">
+                </div>
+                <div class="p3-infos-container">
+                    <div class="p3-teddy-info">
+                        <h2 class="p3-teddy-name"></h2>
+                        <span class="p3-price"></span>
+                        <div class="p3-colors"></div>
+                    </div>
+                    <div class="input-group">
+                        <p>Quantitié(s)</p>
+                        <button onclick="decrement()">-</button>
+                        <input id=demoInput type=number min=0>
+                        <button onclick="increment()">+</button>
+                    </div>
+                    <div class="total">
+                        <p>Total</p>
+                        <span class="total-price">0 €</span>
+                    </div>
+                </div>
+            </article>
+            <div class="buy">
+                <h3 class="order">Passer commande</h3>
+                <form id="form_1" novalidate="">
+                        <div class="label-margin" for="name">
+                            Nom
+                        <input id="name" type="text" class="form-control" required="">
+                        </div>
+                        <div class="label-margin" for="name">
+                            Prénom
+                        <input id="name" type="text" class="form-control" required="">
+                        </div>
+                       
+                        <div class="label-margin" for="adress">
+                            Adresse postale
+                        <input id="adress" type="text" class="form-control" required="">
+                        </div>
+                        
+                        <div class="label-margin" for="city">
+                            Ville
+                        <input id="city" type="text" class="form-control" required="">
+                        </div>
+                        <div class="label-margin" for="zipcode">
+                            Code postal
+                        <input id="zipcode" type="text" class="form-control" required="">
+                        </div>
+                        <div class="label-margin" for="email">
+                            Adresse email
+                        <input id="email" class="form-control" type="email" required="">
+                        </div>
+                        <button class="bloc-button" type="submit">
+                            Valider la commande
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script src="panier.js"></script>
+
+</body>
+<footer class="footer">
+    <div class="colonnes">
+        <div class="colonne1">
+            <h4>À propos</h4>
+            <a class="footer-links" href="#">
+                <p>Fonctionnement du site</p>
+            </a>
+            <a class="footer-links" href="#">
+                <p>Condition générales de vente</p>
+            </a>
+            <a class="footer-links" href="#">
+                <p>Données de confidentialités</p>
+            </a>
+        </div>
+        <div class="colonne2">
+            <h4>Assistance</h4>
+            <a class="footer-links" href="#">
+                <p>Centre d'aide</p>
+            </a>
+            <a class="footer-links" href="#">
+                <p>Nous contacter</p>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<link>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Produit</title>
+<meta name="title" content="Accueil - Orinoco">
+<meta name="description" content="Orinoco le site e-commerce pour d'ours en peluche">
+<script src="https://kit.fontawesome.com/9157bc5015.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="CSS/style.css">
+
+<!--box icons-->
+<link rel=" stylesheet " href=" https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css ">
+</link>
+
+
+
+</head>
+
+<body>
+    <!--gsap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!--gsap-->
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="headercontainer">
+            <a href="/"><img class="logo" src="./images/logoorinco.png" alt="logo orinco"></a>
+        </div>
+        <nav class="paniercontainer">
+            <div class="iconpanier">
+                <a class="pagepanier" href="./panier.html"><i class="fas fa-cart-arrow-down lienpanier"></i></a>
+
+            </div>
+        </nav>
+    </header>
+    <!-- HEADER -->
+    <div class="headerproduct">
+        <div class="retouraccueil">
+            <a class="accueil" href="./Index.html"><i class="fas fa-hand-point-left flecheicon"></i></a>
+        </div>
+
+        <div class="voirpanier">
+            <p class="voirmonpanier">/ Voir mon panier</p>
+        </div>
+
+    </div>
+    <!--grandcontainer-->
+    <div class="grandcontainer">
+
+        <!--container-->
+        <div class="containerproduit">
+
+
+            <!--DIV CARTE-->
+            <div class="cardprod">
+                <img class="imagesproduits" src="http://localhost:3000/images/teddy_1.jpg">
+                <h1 class="nameproduct"></h1>
+
+            </div>
+
+            <div class="tableau">
+
+                <p class="description"></p>
+                <p class="priceproduct"></p>
+
+                <label class="labelselect">Coloris : </label>
+                <select class="color" id="color" name="color">
+                    <option value="Tan">Tan</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+
+                </select>
+
+                <button type="button" id="boutonajout" class="add-to-cart bouttonpanier">Ajouter au panier</button>
+                <div class="dropdown">
+                    <div id="cart">
+                        <p><span id="in-cart-items-num">0</span> Articles</p>
+                    </div>
+
+                    <ul id="cart-dropdown" hidden>
+                        <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+                        <li class="go-to-cart hidden"><a href="/panier/">Voir le panier</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!--container-->
+    </div>
+        <!--grandcontainer-->
+
+        <script src="produit.js"></script>
+
+</body>
+<footer class="footer">
+    <div class="colonnes">
+        <div class="colonne1">
+            <h4>À propos</h4>
+            <a class="footer-links" href="#">
+                <p>Fonctionnement du site</p>
+            </a>
+            <a class="footer-links" href="#">
+                <p>Condition générales de vente</p>
+            </a>
+            <a class="footer-links" href="#">
+                <p>Données de confidentialités</p>
+            </a>
+        </div>
+        <div class="colonne2">
+            <h4>Assistance</h4>
+            <a class="footer-links" href="#">
+                <p>Centre d'aide</p>
+            </a>
+            <a class="footer-links" href="#">
+                <p>Nous contacter</p>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</html>
