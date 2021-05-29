@@ -57,24 +57,3 @@ function ajoutAuPanier() {
     panier.push(addTeddy);
     localStorage.setItem('panier', JSON.stringify(panier))
 }
-
-/*
-      bouton.onclick = Ajoutaupanier;
-}*/
-
-
-
-/*
-        const teddy = {
-            _id: '5be9c8541c9d440000665243',
-            name: '.nameproduct',
-            description: '.description',
-            price: '.priceproduct',
-            colors: ['color']
-        };
-
-
-        
-
-        panier.push(addTeddy); localStorage.setItem('panier', JSON.stringify(panier))
-*/
