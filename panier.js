@@ -1,0 +1,23 @@
+let produitDansLocalStorage = JSON.parse(localStorage.getItem ("teddy"));
+console.log (produitDansLocalStorage);
+
+const url2 = 'http://localhost:3000/api/teddies/';
+
+
+
+
+
+    
+
+  function increment() {}
+
+  function decrement() {}
+
+
+fetch(url2)
+  .then(function (response) {
+    return response.json();
+  })
+  .catch(function (error) {
+    console.log(error)
+  }); 
