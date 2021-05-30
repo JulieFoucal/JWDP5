@@ -52,7 +52,7 @@ function addToCart(event) {
   const price = button.parentElement.querySelector('.panierprice').innerText
   const contenuPanier = document.querySelector('.cart-items')
 
-  //CheckNames
+  //CheckName
   const cartItemNames = itemsContainer.querySelectorAll('.prices')
   for (let i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText === title) {
@@ -67,6 +67,7 @@ function addToCart(event) {
   newItem.innerHTML = `
   <div class="bloc">
 <div class="panierimage">
+
     <img class="imagesproduits2" src="${teddy.imageUrl}">
 </div>
 <div class="panierprice">
