@@ -1,12 +1,12 @@
-API = " http://localhost:3000/api/teddies/";
-const panier = JSON.parse(localStorage.getItem('panier')) || [];
+if (document.readyState == 'loading') {
+  document.addEventListener('DOMContentLoaded', ready)
+} else {
+  ready()
+}
 
-var searchParams = new URLSearchParams(window.location.search);
-const id = searchParams.get("id");
-/*
 function ready() {
-  const removeBtns = document.querySelectorAll('.btn-danger')
-  removeBtns.forEach((btn) => {
+  const removeBoutons = document.querySelectorAll('.btn-remove')
+  removeBoutons.forEach((btn) => {
     btn.addEventListener('click', removeItemFromCard)
   })
 
@@ -14,76 +14,73 @@ function ready() {
   quantityInputs.forEach((input) => {
     input.addEventListener('change', quantityChange)
   })
-
+  $
   const addToCardBtns = document.querySelectorAll('.shop-item-button')
   addToCardBtns.forEach((btn) => {
     btn.addEventListener('click', addToCart)
   })
 
-  const purchaseBtn = document.querySelector('.btn-purchase')
+  const purchaseBtn = document.querySelector('.btn-achat')
   purchaseBtn.addEventListener('click', purchase)
-}*/
+}
 
 //Purchase
-/*
 function purchase() {
-  const itemsContainer = document.querySelector('.cart-items')
+  const contenuPanier = document.querySelector('.bloc')
 
-  if (!itemsContainer.hasChildNodes()) {
+  if (!contenuPanier.hasChildNodes()) {
     return alert('Vous panier est vide')
   }
 
-  while (itemsContainer.hasChildNodes()) {
-    itemsContainer.removeChild(itemsContainer.firstChild)
+  while (contenuPanier.hasChildNodes()) {
+    contenuPanier.removeChild(contenuPanier.firstChild)
   }
 
   updateCartTotal()
   alert("Merci d'avoir passsé commande")
-}*/
-
+}
 
 //AddToCart
 function addToCart(event) {
   const button = event.target
   const imageUrl =
-    button.parentElement.parentElement.querySelector('.imagesproduits').src
+    button.parentElement.parentElement.querySelector('.panierimage').src
   const title =
     button.parentElement.parentElement.querySelector(
-      '.nameproduct'
+      '.bloc'
     ).innerText
-  const price = button.parentElement.querySelector('.tableau').innerText
-  const itemsContainer = document.querySelector('.cardprod')
+  const price = button.parentElement.querySelector('.panierprice').innerText
+  const contenuPanier = document.querySelector('.cart-items')
 
-  /*
   //CheckNames
-  const cartItemNames = itemsContainer.querySelectorAll('.cart-item-title')
+  const cartItemNames = itemsContainer.querySelectorAll('.prices')
   for (let i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText === title) {
       return alert('Ce produit est déjà dans votre panier')
     }
-  }*/
+  }
 
   //ADD new item
   const newItem = document.createElement('div')
-  newItem.classList.add('cart-row')
-  itemsContainer.append(newItem)
-  newItem.innerHTML = `<div class="cart-item cart-column">
-            <img
-              class="cart-item-image"
-              src="${imageUrl}"
-              width="100"
-              height="100"
-            />
-            <span class="cart-item-title">${title}</span>
-          </div>
-          <span class="cart-price cart-column">${price}</span>
-          <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1" />
-            <button class="btn btn-danger" type="button">REMOVE</button>
-          </div>`
+  newItem.classList.add('bloc')
+  contenuPanier.append(newItem)
+  newItem.innerHTML = `
+  <div class="bloc">
+<div class="panierimage">
+    <img class="imagesproduits2" src="${teddy.imageUrl}">
+</div>
+<div class="panierprice">
+    <p class="prices">${ (teddy.price/100).toFixed(2)}</p>
+</div>
+<div class="cart-quantity cart-column">
+    <input class="cart-quantity-input" type="number" value="1" />
+    <button class="btn btn-remove" type="button">ENLEVER DU PANIER</button>
+  </div>
+</div>
+  `
 
   newItem
-    .querySelector('.btn-danger')
+    .querySelector('.btn-remove')
     .addEventListener('click', removeItemFromCard)
 
   newItem
@@ -115,13 +112,13 @@ function quantityChange(event) {
 
 //UpdateCartTotal
 function updateCartTotal() {
-  const cartItemContainer = document.querySelector('.cart-items')
-  const cartRows = cartItemContainer.getElementsByClassName('cart-row')
+  const cartItemContainer = document.querySelector('.bloc')
+  const cartRows = cartItemContainer.getElementsByClassName('bloc')
   let total = 0
 
   for (let i = 0; i < cartRows.length; i++) {
     let cartRow = cartRows[i]
-    let priceElement = cartRow.querySelectorAll('.cart-price')[0]
+    let priceElement = cartRow.querySelectorAll('.prices')[0]
     let quantityElement = cartRow.getElementsByClassName(
       'cart-quantity-input'
     )[0]

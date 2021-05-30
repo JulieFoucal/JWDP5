@@ -10,7 +10,7 @@ fetch(API)
 <div class="card">
 <img src="${teddy.imageUrl}" alt="" class="imagesours">
 <div class="caption">
-<div class"nom">${ teddy.name }</div> 
+<div class"nom">${ teddy.name }</div> x
 <div class"blabla">${ teddy.description }</div>
 <div class"prix">${ (teddy.price/100).toFixed(2)} €</div>
 </div>

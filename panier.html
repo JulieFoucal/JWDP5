@@ -38,69 +38,83 @@
     </div>
 
 </div>
+
 <body>
     <div class="grandcontainer2">
-       
-            <section class="section">
-                <h2 class="section-header">CART</h2>
-                <div class="cart-row">
-                  <span class="cart-item cart-header cart-column">ITEM</span>
-                  <span class="cart-price cart-header cart-column">PRICE</span>
-                  <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-                </div>
-          
-                <div class="cart-items">
-                </div>
-          
-                <div class="cart-total">
-                  <strong class="cart-total-title">Total</strong>
-                  <span class="cart-total-price">0 €</span>
-                </div>
-                <button class="btn btn-primary btn-purchase" type="button">
-                  PURCHASE
-                </button>
-              </section>
-            <div class="buy">
-                <h3 class="order">Passer commande</h3>
-                <form id="form_1" novalidate="">
-                        <div class="label-margin" for="name">
-                            Nom
-                        <input id="name" type="text" class="form-control" required="">
-                        </div>
-                        <div class="label-margin" for="name">
-                            Prénom
-                        <input id="name" type="text" class="form-control" required="">
-                        </div>
-                       
-                        <div class="label-margin" for="adress">
-                            Adresse postale
-                        <input id="adress" type="text" class="form-control" required="">
-                        </div>
-                        
-                        <div class="label-margin" for="city">
-                            Ville
-                        <input id="city" type="text" class="form-control" required="">
-                        </div>
-                        <div class="label-margin" for="zipcode">
-                            Code postal
-                        <input id="zipcode" type="text" class="form-control" required="">
-                        </div>
-                        <div class="label-margin" for="email">
-                            Adresse email
-                        <input id="email" class="form-control" type="email" required="">
-                        </div>
-                        <button class="bloc-button" type="submit">
-                            Valider la commande
-                        </button>
-                </form>
-            </div>
-        </div>
+        <!--bleu-->
+        <section class="section">
+            <!--bleu-->
+<div class="bloc0">
+<div class="headerbloc">
+    <span class="titleproduit">PRODUIT</span>
+                <span class="titleprice">PRICE</span>
+                <span class="titlequantite">QUANTITY</span>
+</div>
+</div>
+
+<div class="bloc">
+<div class="panierimage">
+    <img class="imagesproduits2" src="http://localhost:3000/images/teddy_1.jpg">
+</div>
+<div class="panierprice">
+    <p class="prices">29,00 €</p>
+</div>
+<div class="cart-quantity cart-column">
+    <input class="cart-quantity-input" type="number" value="1" />
+    <button class="btn btn-remove" type="button">ENLEVER DU PANIER</button>
+  </div>
+</div>
+
+
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">0 €</span>
     </div>
-    
+    <button class="btn btn-primary btn-achat" type="button">
+        ACHETEZ
+    </button>
+    </section>
+    <div class="buy">
+        <h3 class="order">Passer commande</h3>
+        <form id="form_1" novalidate="">
+            <div class="label-margin" for="name">
+                Nom
+                <input id="name" type="text" class="form-control" required="">
+            </div>
+            <div class="label-margin" for="name">
+                Prénom
+                <input id="name" type="text" class="form-control" required="">
+            </div>
+
+            <div class="label-margin" for="adress">
+                Adresse postale
+                <input id="adress" type="text" class="form-control" required="">
+            </div>
+
+            <div class="label-margin" for="city">
+                Ville
+                <input id="city" type="text" class="form-control" required="">
+            </div>
+            <div class="label-margin" for="zipcode">
+                Code postal
+                <input id="zipcode" type="text" class="form-control" required="">
+            </div>
+            <div class="label-margin" for="email">
+                Adresse email
+                <input id="email" class="form-control" type="email" required="">
+            </div>
+            <button class="bloc-button" type="submit">
+                Valider la commande
+            </button>
+        </form>
+    </div>
+    </div>
+    </div>
 
 
 
-<script src="panier.js"></script>
+
+    <script src="panier.js"></script>
 
 </body>
 <footer class="footer">
