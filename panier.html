@@ -40,30 +40,26 @@
 </div>
 <body>
     <div class="grandcontainer2">
-        <div class="cart-product">
-            <div class="cart-header">Résumé de l'article</div>
-            <article class="p3-teddy-container">
-                <div class="p3-teddy">
-                   <img class="p3-teddy-pic" src="" alt="">
+       
+            <section class="section">
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                  <span class="cart-item cart-header cart-column">ITEM</span>
+                  <span class="cart-price cart-header cart-column">PRICE</span>
+                  <span class="cart-quantity cart-header cart-column">QUANTITY</span>
                 </div>
-                <div class="p3-infos-container">
-                    <div class="p3-teddy-info">
-                        <h2 class="p3-teddy-name"></h2>
-                        <span class="p3-price"></span>
-                        <div class="p3-colors"></div>
-                    </div>
-                    <div class="input-group">
-                        <p>Quantitié(s)</p>
-                        <button onclick="decrement()">-</button>
-                        <input id=demoInput type=number min=0>
-                        <button onclick="increment()">+</button>
-                    </div>
-                    <div class="total">
-                        <p>Total</p>
-                        <span class="total-price">0 €</span>
-                    </div>
+          
+                <div class="cart-items">
                 </div>
-            </article>
+          
+                <div class="cart-total">
+                  <strong class="cart-total-title">Total</strong>
+                  <span class="cart-total-price">0 €</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">
+                  PURCHASE
+                </button>
+              </section>
             <div class="buy">
                 <h3 class="order">Passer commande</h3>
                 <form id="form_1" novalidate="">
@@ -100,7 +96,7 @@
             </div>
         </div>
     </div>
-
+    
 
 
 
