@@ -53,5 +53,5 @@ function ready() {
       total = total + quantity * price
     }
     total = Math.round(total * 100) / 100
-    document.querySelector('.totalprice').innerText = `€${total}`
+    document.querySelector('.cart-total-price').innerText = `€${total}`
   }

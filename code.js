@@ -7,14 +7,24 @@ fetch(API)
         const container = document.querySelector(".container1");
         for (const teddy of teddies) {
             container.innerHTML += `
-<div class="card">
-<img src="${teddy.imageUrl}" alt="" class="imagesours">
-<div class="caption">
-<div class"nom">${ teddy.name }</div> x
-<div class"blabla">${ teddy.description }</div>
-<div class"prix">${ (teddy.price/100).toFixed(2)} €</div>
-</div>
-<a href="produit.html?id=${teddy._id}" class="voir">Voir le produit</a>
-</div>`
+            <div class="carteteddy">
+                <div class="contenucarteimg">
+                    <img src="${teddy.imageUrl}" alt="" class="imgteddy">
+                </div>
+
+                <div class="contenuteddyname">
+                    <h2 class="teddyname">${ teddy.name }</h2>
+                </div>
+
+                <p class="teddydescription">${ teddy.description }
+                </p>
+
+                <p class="teddyprice">${ (teddy.price/100).toFixed(2)} €
+                </p>
+
+               <a href="pageproduit.html?id=${teddy._id}"><p class="voirproduit">
+                </p></a>
+            </div>
+`
         }
     })

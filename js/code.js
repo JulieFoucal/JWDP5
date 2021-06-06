@@ -21,7 +21,7 @@ fetch(API)
             <div class="imgdescription">${ teddy.description }</div>
 
             <div class="voirproduit">
-<a href="produit.html?id=${teddy._id}" class="linkproduit">Voir le produit</a>
+<a href="pageproduit.html?id=${teddy._id}" class="linkproduit">Voir le produit</a>
 </div>
 </div>
 `
