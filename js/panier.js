@@ -55,24 +55,13 @@ function quantityChange(event) {
   updateCartTotal()
 }
 
-
-function removeItemFromCard(event) {
-  let button = event.target
-  button.parentElement.parentElement.remove()
-  updateCartTotal()
-}
   
 
 
-function quantityChange(event) {
-  inputValue = event.target.value
 
-  if (isNaN(inputValue) || inputValue <= 0) {
-    event.target.value = 1
-  }
-    //Changement automatique du prix total du panier
-  updateCartTotal()
-}
+
+
+
 
 //UpdateCartTotal
 //function updateCartTotal() {
