@@ -42,8 +42,8 @@ body {
     background-color: rgb(243, 234, 236);
 }
 
-.containerproduct{
-    background-color:blue;
+.containerproduct {
+    background-color: blue;
     width: 100%;
     height: 40vw;
 }
@@ -78,91 +78,33 @@ body {
     text-decoration: none;
 }
 
-
-.containerproduit2 {
-    display: flex;
-    background-color: rgb(217, 217, 223);
-    width: 90%;
-    height: 40vw;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.ligneproduit {
-    display: flex;
-    background-color: yellow;
-    width: 90%;
-    height: 8vw;
-    margin-top: 10px;
-    justify-content: space-between;
-}
-
-.imgproduitpanier {
-    width: 15%;
-    height: 8vw;
-}
-
-.imageproduitpanier {
+.bloc0 {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 50vw;
+    background-color: blue;
 }
 
-.quantite {
+
+.bloc1 {
     background-color: pink;
-    width: 20%;
-    margin-top: auto;
-    margin-bottom: auto;
-    font-size:1.5em;
-}
-
-.cart-quantity{
-    width:30%;
-    font-size:1.2em;
-}
-
-.prixproduitpanier {
-    background-color: cyan;
-    width: 20%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.btnremove {
-    background-color: rgb(202, 172, 172);
-    width: 20%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.btn-remove {
-    background-color: red;
-    border-radius: 10px 10px 10px 10px;
-    width: 80%;
-    font-size: 1.3em;
-}
-
-.totalpanier{
-    display: flex;
-    background-color:white;
-    width:90%;
-    height:3vw;
+    width: 90%;
+    height: 30vw;
     margin-left: auto;
     margin-right: auto;
+}
+
+.detailcommande{
+    width:100%;
+    height: 26vw;
+    background-color:yellow;
+}
+
+.numerocommande{
+    background-color:cyan;
+    text-align: center;
     font-size: 2em;
-    justify-content: space-between;
 }
 
-.totaltitle{
-    padding-left: 20px;
-}
-
-.btn-commander{
-    background-color:red;
-    width:20%;
-    height:2vw;
-    border-radius: 10px 10px 10px 10px;
-}
 
 
 

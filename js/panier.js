@@ -37,21 +37,4 @@ function ready() {
     updateCartTotal()
   }
 
-  function updateCartTotal() {
-    const cartItemContainer = document.querySelector('.ligneproduit')
-    const cartRows = cartItemContainer.getElementsByClassName('.ligneproduit')
-    let total = 0
   
-    for (let i = 0; i < cartRows.length; i++) {
-      let cartRow = cartRows[i]
-      let priceElement = cartRow.querySelectorAll('.prixproduitpanier')[0]
-      let quantityElement = cartRow.getElementsByClassName(
-        'cart-quantity'
-      )[0]
-  
-      const quantity = quantityElement.value
-      total = total + quantity * price
-    }
-    total = Math.round(total * 100) / 100
-    document.querySelector('.cart-total-price').innerText = `€${total}`
-  }
