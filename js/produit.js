@@ -33,6 +33,7 @@ function getParameter(teddy) {
 }
 
 
+
 fetch(API + id)
     .then(function (response) {
         return response.json();
