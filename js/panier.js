@@ -1,3 +1,5 @@
+document.querySelector('.number').innerHTML = localStorage.getItem('panier') || 0;
+
 API = " http://localhost:3000/api/teddies/";
 const panier = JSON.parse(localStorage.getItem('panier')) || [];
 
@@ -10,6 +12,11 @@ if (document.readyState == 'loading') {
 } else {
   ready()
 }
+
+//recuperer donnees panier
+produit.push(addTeddy);
+localStorage.setItem('panier', JSON.stringify(panier))
+
 
 //declaration de la fonction ready
 function ready() {
