@@ -60,7 +60,7 @@
 
                 <div class="quantite">
                     quantity
-                    <input class="cart-quantity" type="number" value="1" />
+                    <input class="cart-quantity" type="number" value="1"  min="1"/>
                 </div>
 
                 <div class="prixproduitpanier">
@@ -79,40 +79,9 @@
             
         </div>
         
-        <div class="passercommande">
+        <div class="passercommande" id="passerlacommande">
             <h3 class="order">Passer commande</h3>
-            <form id="questions" >
-                    <div class="label-margin" for="name">
-                        Nom
-                    <input id="name" type="text" class="form-control" required="">
-                    </div>
-                    
-                    <div class="label-margin" for="name">
-                        Prénom
-                    <input id="name" type="text" class="form-control" required="">
-                    </div>
-                    <div class="label-margin" for="adress">
-                        Adresse postale
-                    <input id="adress" type="text" class="form-control" required="">
-                    </div>
-
-                    <div class="label-margin" for="zipcode">
-                        Code postale
-                    <input id="zipcode" type="text" class="form-control" required="">
-                    </div>
-                    
-                    <div class="label-margin" for="city">
-                        Ville
-                    <input id="city" type="text" class="form-control" required="">
-                    </div>
-                    <div class="label-margin" for="email">
-                        Adresse email
-                    <input id="email" class="form-control" type="email" required="">
-                    </div>
-                    <button class="btn-commander" type="submit">
-                        Valider la commande
-                    </button>
-            </form>
+            
         </div>
 
     </div>

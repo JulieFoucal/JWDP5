@@ -1,3 +1,10 @@
+API = " http://localhost:3000/api/teddies/";
+const panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+console.log(panier);
+
+
+
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -26,15 +33,13 @@ function commander() {
 
   //alerte votre panier est vide
   if (!itemsContainer.hasChildNodes()) {
-    return alert('Vous panier est vide')
+    return alert('Votre panier est vide')
   }
 
   while (itemsContainer.hasChildNodes()) {
     itemsContainer.removeChild(itemsContainer.firstChild)
   }
 
-  updateCartTotal()
-  alert("Merci d'avoir passsé commande")
 }
 
 function removeItemFromCard(event) {
@@ -43,40 +48,61 @@ function removeItemFromCard(event) {
   updateCartTotal()
 }
 
-//declaration quantité pas en dessous de 1
-function quantityChange(event) {
-  let inputValue = event.target.value
 
-  if (isNaN(inputValue) || inputValue <= 0) {
-    event.target.value = 1
-  }
-
-  //Changement automatique du prix total du panier
-  updateCartTotal()
-}
 
   
+const afficherleformulaire =() => {
+
+  const formulaire = document.querySelector('#passerlacommande')
+
+  const structureduformulaire = `
+  <form id="questions" >
+                    <div class="label-margin" for="name">
+                        Nom
+                    <input id="firstname" type="text" class="form-control" required="">
+                    </div>
+                    
+                    <div class="label-margin" for="firstname">
+                        Prénom
+                    <input id="name" type="text" class="form-control" required="">
+                    </div>
+                    <div class="label-margin" for="adress">
+                        Adresse postale
+                    <input id="adress" type="text" class="form-control" required="">
+                    </div>
+
+                    <div class="label-margin" for="zipcode">
+                        Code postale
+                    <input id="zipcode" type="text" class="form-control" required="">
+                    </div>
+                    
+                    <div class="label-margin" for="city">
+                        Ville
+                    <input id="city" type="text" class="form-control" required="">
+                    </div>
+                    <div class="label-margin" for="email">
+                        Adresse email
+                    <input id="email" class="form-control" type="email" required="">
+                    </div>
+                    <button class="btn-commander" type="submit">
+                        Valider la commande
+                    </button>
+            </form>
+  `
+;
+
+formulaire.insertAdjacentHTML("afterend",structureduformulaire);
+};
+
+//affichage formulaire
+afficherleformulaire();
+
+//recuperer formulaire
+
+localStorage.setItem("firstname", document.querySelector("#firstname").value);
+
+console.log(document.querySelector("#firstname").value);
 
 
 
 
-
-
-
-//UpdateCartTotal
-//function updateCartTotal() {
-//const cartItemContainer = document.querySelector('.ligneproduit')
-//const cartRows = cartItemContainer.getElementsByClassName('containerproduit2')
-//let total = 0
-//for (let i = 0; i < cartRows.length; i++) {
-// let cartRow = cartRows[i]
-//let quantityElement = cartRow.getElementsByClassName(
-//   'cart-quantity'
-// )[0]
-
-//const quantity = quantityElement.value
-//total = total + quantity * price
-//}
-//total = Math.round(total * 100) / 100
-//document.querySelector('.totalprice').innerText = `€${total}`
-//}
