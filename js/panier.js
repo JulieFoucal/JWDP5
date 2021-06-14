@@ -1,11 +1,18 @@
-document.querySelector('.number').innerHTML = localStorage.getItem('panier') || 0;
+const count = localStorage.getItem('number') || 0;
+console.log(count);
+const numbertag= document.querySelector('.number')
+console.log(numbertag);
+
+numbertag.innerHTML = count;
 
 API = " http://localhost:3000/api/teddies/";
-const panier = JSON.parse(localStorage.getItem('panier')) || [];
+const panier = JSON.parse(localStorage.getItem('produits')) || [];
 
 console.log(panier);
 
-
+for (const article of panier){
+  console.log(article);
+}
 
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready)
@@ -13,9 +20,8 @@ if (document.readyState == 'loading') {
   ready()
 }
 
-//recuperer donnees panier
-produit.push(addTeddy);
-localStorage.setItem('panier', JSON.stringify(panier))
+
+//afficher le nombre d'article au panier
 
 
 //declaration de la fonction ready
@@ -25,13 +31,13 @@ function ready() {
     btn.addEventListener('click', removeItemFromCard)
   })
 
-  const quantityInputs = document.querySelectorAll('.cart-quantity')
-  quantityInputs.forEach((input) => {
-    input.addEventListener('change', quantityChange)
-  })
+  // const quantityInputs = document.querySelectorAll('.cart-quantity')
+  // quantityInputs.forEach((input) => {
+  //   input.addEventListener('change', quantityChange)
+  // })
 
-  const purchaseBtn = document.querySelector('.btn-commander')
-  purchaseBtn.addEventListener('click', commander)
+  // const purchaseBtn = document.querySelector('.btn-commander')
+  // purchaseBtn.addEventListener('click', commander)
 }
 
 //Commander à partir du bouton commander
@@ -61,7 +67,7 @@ function removeItemFromCard(event) {
   
 const afficherleformulaire =() => {
 
-  const formulaire = document.querySelector('#passercommande')
+  const formulaire = document.querySelector('#passerlacommande')
 
   const structureduformulaire = `
   <form id="questions" >
@@ -98,8 +104,8 @@ const afficherleformulaire =() => {
             </form>
   `
 ;
-
-formulaire.insertAdjacentHTML("afterend",structureduformulaire);
+/* 
+formulaire.insertAdjacentHTML("afterend",structureduformulaire*/
 };
 
 //affichage formulaire
@@ -107,11 +113,12 @@ afficherleformulaire();
 
 //recuperer formulaire
 
+/*
 localStorage.setItem("firstname", document.querySelector("#firstname").value);
-localStorage.setItem("firstname", document.querySelector("#firstname").value);
+localStorage.setItem("firstname", document.querySelector("#firstname").value);*/
 
 
-console.log(document.querySelector("#firstname").value);
+// console.log(document.querySelector("#firstname").value);
 
 
 
