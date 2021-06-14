@@ -54,8 +54,8 @@ function ajoutAuPanier() {
 
 let btnAdd = document.querySelector('.btnajoutpanier');
 btnAdd.addEventListener("click", function () {
-  // console.log(this.closest('.scnd-teddy-container').getAttribute('data-id'));
-  let image = document.querySelector('.imgproduitpanier').getAttribute('src');
+
+    let image = document.querySelector('.imgproduitpanier').getAttribute('src');
   let color = document.querySelector('#color').value
   let price = parseInt(document.querySelector('.priceproduct').innerText);
   let produits = JSON.parse(localStorage.getItem('produits')) || [];

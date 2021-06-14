@@ -38,6 +38,19 @@ body {
     margin-top: 40px;
 }
 
+.number {
+    background-color: blue;
+    height: fit-content;
+    padding: 0px 4px;
+    color:transparent;
+    border-radius: 50%;
+    position: relative;
+    top:10px;
+    width:3px;
+    height:3px;
+    font-size: 4px;
+}
+
 body {
     background-color: rgb(243, 234, 236);
 }

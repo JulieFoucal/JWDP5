@@ -35,6 +35,7 @@ function ready() {
 }
 
 //Commander à partir du bouton commander
+/* 
 function commander() {
   const itemsContainer = document.querySelector('.ligneproduit')
 
@@ -47,7 +48,7 @@ function commander() {
     itemsContainer.removeChild(itemsContainer.firstChild)
   }
 
-}
+}*/
 
 function removeItemFromCard(event) {
   let button = event.target
@@ -60,7 +61,7 @@ function removeItemFromCard(event) {
   
 const afficherleformulaire =() => {
 
-  const formulaire = document.querySelector('#passerlacommande')
+  const formulaire = document.querySelector('#passercommande')
 
   const structureduformulaire = `
   <form id="questions" >
@@ -107,6 +108,8 @@ afficherleformulaire();
 //recuperer formulaire
 
 localStorage.setItem("firstname", document.querySelector("#firstname").value);
+localStorage.setItem("firstname", document.querySelector("#firstname").value);
+
 
 console.log(document.querySelector("#firstname").value);
 
