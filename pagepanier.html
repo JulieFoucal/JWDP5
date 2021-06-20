@@ -52,9 +52,9 @@
         </div>
 
 
-        <div class="containerproduit2">
+        <div class="containerproduit2" >
 
-            <div class="ligneproduit">
+            <div class="ligneproduit" id="containerpanier">
 
                 <div class="imgproduitpanier" id="prodid">
                     <img src="images/teddy_3.jpg" alt="imageproduitpanier" class="imageproduitpanier">
@@ -84,7 +84,38 @@
         
         <div class="passercommande" id="passercommande">
             <h3 class="order">Passer commande</h3>
-            
+            <form id="inscription" >
+                <div class="label-margin" for="firstname" >
+                    Prénom
+                <input id="prenom" type="text" class="form-control prenom" placeholder="First Name">
+                </div>
+                
+                <div class="label-margin" for="name">
+                    Nom
+                <input id="nom" type="text" class="form-control nom" placeholder="Name">
+                </div>
+                <div class="label-margin" for="adress">
+                    Adresse postale
+                <input id="adresse" type="text" class="form-control adresse"  placeholder="Adresse">
+                </div>
+
+                <div class="label-margin" for="zipcode">
+                    Code postale
+                <input id="zipcode" type="text" class="form-control zipcode"  placeholder="Code Postale">
+                </div>
+                
+                <div class="label-margin" for="city">
+                    Ville
+                <input id="ville" type="text" class="form-control ville"  placeholder="City">
+                </div>
+                <div class="label-margin" for="email">
+                    Adresse email
+                <input id="email" class="form-control email" type="email"  placeholder="Email">
+                </div>
+                <button class="btn-commander" type="submit" value="Vaidation commande">
+                    Valider la commande
+                </button>
+        </form>
         </div>
 
     </div>

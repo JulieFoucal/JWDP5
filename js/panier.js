@@ -1,9 +1,13 @@
+//afficher le nombre d'article au panier
+
 const count = localStorage.getItem('number') || 0;
 console.log(count);
 const numbertag= document.querySelector('.number')
 console.log(numbertag);
 
 numbertag.innerHTML = count;
+
+//recuperer les produits dans le local storage
 
 API = " http://localhost:3000/api/teddies/";
 const panier = JSON.parse(localStorage.getItem('produits')) || [];
@@ -20,11 +24,28 @@ if (document.readyState == 'loading') {
   ready()
 }
 
+//selection de l'endroit ou je vais injecter le code innerHTML
 
-//afficher le nombre d'article au panier
+const ProduitDansPanier = document.querySelector('#containerpanier');
+
+console.log(ProduitDansPanier);
 
 
-//declaration de la fonction ready
+//si le panier est vide
+
+if(produits === null){
+
+  console.log("panier vide")
+
+}
+
+else {
+
+  console.log("je ne suis pas vie")
+}
+
+
+//declaration de la fonction ready enlever un article du panier
 function ready() {
   const removeBtns = document.querySelectorAll('.btn-remove')
   removeBtns.forEach((btn) => {
@@ -63,53 +84,38 @@ function removeItemFromCard(event) {
 }
 
 
+let boutonCommander = document.querySelector("btn-commander");
+console.log(boutonCommander);
+
+
+
+
+boutonCommander.addEventListener("click",() => {
+  // recuperer les donnees du formulaire
+const coordonnees= document.querySelector('.name')
+console.log(coordonnees);
+
+  localStorage.setItem("prenom", document.querySelector("#prenom").value);
+  localStorage.setItem("nom", document.querySelector("#nom").value);
+  localStorage.setItem("adresse", document.querySelector("#adresse").value);
+  localStorage.setItem("zipcode", document.querySelector("#zipcode").value);
+  localStorage.setItem("email", document.querySelector("#email").value);
+
+
+  console.log(document.querySelector("#prenom").value);
+})
+
 
   
-const afficherleformulaire =() => {
 
-  const formulaire = document.querySelector('#passerlacommande')
+  
 
-  const structureduformulaire = `
-  <form id="questions" >
-                    <div class="label-margin" for="name">
-                        Nom
-                    <input id="firstname" type="text" class="form-control" required="">
-                    </div>
-                    
-                    <div class="label-margin" for="firstname">
-                        Prénom
-                    <input id="name" type="text" class="form-control" required="">
-                    </div>
-                    <div class="label-margin" for="adress">
-                        Adresse postale
-                    <input id="adress" type="text" class="form-control" required="">
-                    </div>
-
-                    <div class="label-margin" for="zipcode">
-                        Code postale
-                    <input id="zipcode" type="text" class="form-control" required="">
-                    </div>
-                    
-                    <div class="label-margin" for="city">
-                        Ville
-                    <input id="city" type="text" class="form-control" required="">
-                    </div>
-                    <div class="label-margin" for="email">
-                        Adresse email
-                    <input id="email" class="form-control" type="email" required="">
-                    </div>
-                    <button class="btn-commander" type="submit">
-                        Valider la commande
-                    </button>
-            </form>
-  `
-;
 /* 
 formulaire.insertAdjacentHTML("afterend",structureduformulaire*/
-};
+
 
 //affichage formulaire
-afficherleformulaire();
+
 
 //recuperer formulaire
 
