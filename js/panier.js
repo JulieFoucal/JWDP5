@@ -33,7 +33,7 @@ console.log(ProduitDansPanier);
 
 //si le panier est vide
 
-if(produits === null){
+if(ProduitDansPanier === null){
 
   console.log("panier vide")
 
@@ -41,7 +41,7 @@ if(produits === null){
 
 else {
 
-  console.log("je ne suis pas vie")
+  console.log("je ne suis pas vide")
 }
 
 
