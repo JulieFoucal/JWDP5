@@ -13,9 +13,34 @@ API = " http://localhost:3000/api/teddies/";
 const panier = JSON.parse(localStorage.getItem('produits')) || [];
 
 console.log(panier);
+const contenant = document.getElementById('containerproduit2');
 
 for (const article of panier){
   console.log(article);
+  const content =`
+  <div class="ligneproduit" id="containerpanier">
+
+                <div class="imgproduitpanier" id="prodid">
+                    <img src="images/teddy_3.jpg" alt="imageproduitpanier" class="imageproduitpanier">
+                </div>
+
+
+                <div class="quantite">
+                    quantity
+                    <input class="cart-quantity" type="number" value="1"  min="1"/>
+                </div>
+
+                <div class="prixproduitpanier" id="prix">
+                    30,00 €s
+                </div>
+
+                <div class="btnremove">
+                    <button class="btn-remove" type="button">ENLEVER DU PANIER</button>
+                </div>
+            </div>
+  
+  `
+  contenant.innerHTML+=content
 }
 
 if (document.readyState == 'loading') {
@@ -24,25 +49,6 @@ if (document.readyState == 'loading') {
   ready()
 }
 
-//selection de l'endroit ou je vais injecter le code innerHTML
-
-const ProduitDansPanier = document.querySelector('#containerpanier');
-
-console.log(ProduitDansPanier);
-
-
-//si le panier est vide
-
-if(ProduitDansPanier === null){
-
-  console.log("panier vide")
-
-}
-
-else {
-
-  console.log("je ne suis pas vide")
-}
 
 
 //declaration de la fonction ready enlever un article du panier
