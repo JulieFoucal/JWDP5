@@ -106,9 +106,10 @@ body {
 
 .ligneproduit {
     display: flex;
+    flex-wrap: wrap;
     background-color: yellow;
-    width: 90%;
-    height: 8vw;
+    width: 40%;
+    height: 10vw;
     margin-top: 10px;
     justify-content: space-between;
 }

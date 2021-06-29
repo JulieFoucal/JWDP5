@@ -20,8 +20,8 @@ for (const article of panier){
   const content =`
   <div class="ligneproduit" id="containerpanier">
 
-                <div class="imgproduitpanier" id="prodid">
-                    <img src="images/teddy_3.jpg" alt="imageproduitpanier" class="imageproduitpanier">
+                <div class="imgproduitpanier" id="produit">
+                    <img src="${article.image}" alt="imageproduitpanier" class="imageproduitpanier">
                 </div>
 
 
@@ -31,7 +31,7 @@ for (const article of panier){
                 </div>
 
                 <div class="prixproduitpanier" id="prix">
-                    30,00 €s
+                ${ (article.price).toFixed(2)} €
                 </div>
 
                 <div class="btnremove">
