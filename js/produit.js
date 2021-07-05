@@ -55,10 +55,11 @@ fetch(API + id)
 let btnAdd = document.querySelector('.btnajoutpanier');
 btnAdd.addEventListener("click", function () {
 
-    let image = document.querySelector('.imgproduitpanier').getAttribute('src');
+  let image = document.querySelector('.imgproduitpanier').getAttribute('src');
   let color = document.querySelector('#color').value
   let price = parseInt(document.querySelector('.priceproduct').innerText);
   let produits = JSON.parse(localStorage.getItem('produits')) || [];
+  let name = document.querySelector('.nameproduct').innerText;
   let productIndex = produits.findIndex(function (element) {
     return element.id === id && element.color == color;
   })
@@ -77,6 +78,7 @@ btnAdd.addEventListener("click", function () {
       image: image,
       price: price,
       color: color,
+      name: name,
       count: produits[productIndex].count + 1
     }
   }
