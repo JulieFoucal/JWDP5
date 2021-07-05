@@ -102,13 +102,14 @@ body {
     height: 40vw;
     margin-right: auto;
     margin-left: auto;
+    flex-direction: column;
 }
 
 .ligneproduit {
     display: flex;
     flex-wrap: wrap;
     background-color: yellow;
-    width: 40%;
+    width: 80%;
     height: 10vw;
     margin-top: 10px;
     justify-content: space-between;

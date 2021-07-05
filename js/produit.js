@@ -38,19 +38,19 @@ fetch(API + id)
 
 
 
-function ajoutAuPanier() {
-    const colorTag = document.getElementById('color');
-    const addTeddy = {
-        _id: currentTeddy._id,
-        name: currentTeddy.name,
-        price: currentTeddy.price,
-        color: colorTag.value,
-        quantity: 1
-    }
+// function ajoutAuPanier() {
+//     const colorTag = document.getElementById('color');
+//     const addTeddy = {
+//         _id: currentTeddy._id,
+//         name: currentTeddy.name,
+//         price: currentTeddy.price,
+//         color: colorTag.value,
+//         quantity: 1
+//     }
     
-    panier.push(addTeddy);
-    localStorage.setItem('panier', JSON.stringify(panier))
-}
+//     panier.push(addTeddy);
+//     localStorage.setItem('panier', JSON.stringify(panier))
+// }
 
 let btnAdd = document.querySelector('.btnajoutpanier');
 btnAdd.addEventListener("click", function () {
@@ -60,7 +60,7 @@ btnAdd.addEventListener("click", function () {
   let price = parseInt(document.querySelector('.priceproduct').innerText);
   let produits = JSON.parse(localStorage.getItem('produits')) || [];
   let productIndex = produits.findIndex(function (element) {
-    return element.id === id;
+    return element.id === id && element.color == color;
   })
   if (productIndex === -1) {
     produits.push({

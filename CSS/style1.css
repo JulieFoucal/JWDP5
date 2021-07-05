@@ -122,6 +122,7 @@ body {
     border-radius: 23px 23px 23px 23px;
     text-decoration: none;
     text-align: center;
+    box-shadow: 2px 2px 20px #777;
 }
 
 .imgteddy {
