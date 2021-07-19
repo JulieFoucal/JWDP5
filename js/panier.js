@@ -148,6 +148,7 @@ boutonCommander.addEventListener("click", () => {
   "zipcode": document.querySelector("#zipcode").value,
   "email": document.querySelector("#email").value,
   };
+  console.log(user);
   for(item in user) {
     if (user[item] === undefined || user[item] === "") {return;}
   }
