@@ -79,30 +79,7 @@ function ready() {
   })
   computeTotal();
 
-  // const quantityInputs = document.querySelectorAll('.cart-quantity')
-  // quantityInputs.forEach((input) => {
-  //   input.addEventListener('change', quantityChange)
-  // })
-
-  // const purchaseBtn = document.querySelector('.btn-commander')
-  // purchaseBtn.addEventListener('click', commander)
-}
-
-//Commander à partir du bouton commander
-/* 
-function commander() {
-  const itemsContainer = document.querySelector('.ligneproduit')
-
-  //alerte votre panier est vide
-  if (!itemsContainer.hasChildNodes()) {
-    return alert('Votre panier est vide')
-  }
-
-  while (itemsContainer.hasChildNodes()) {
-    itemsContainer.removeChild(itemsContainer.firstChild)
-  }
-
-}*/
+//enlever un produit du panier et du localStorage
 
 function removeItemFromCard(event) {
   let button = event.target;
@@ -122,10 +99,8 @@ let boutonCommander = document.querySelector("btn-commander");
 console.log(boutonCommander);
 
 
-
-
 boutonCommander.addEventListener("click", () => {
-  // recuperer les donnees du formulaire
+  // recuperer les donnees du formulaire 1
   const coordonnees = document.querySelector('.name')
   console.log(coordonnees);
 
@@ -137,25 +112,10 @@ boutonCommander.addEventListener("click", () => {
 
 
   console.log(document.querySelector("#prenom").value);
-})
+})}
 
 
 
+      // Enlever les produits du localstorage après validation de la commande
 
-
-
-/* 
-formulaire.insertAdjacentHTML("afterend",structureduformulaire*/
-
-
-//affichage formulaire
-
-
-//recuperer formulaire
-
-/*
-localStorage.setItem("firstname", document.querySelector("#firstname").value);
-localStorage.setItem("firstname", document.querySelector("#firstname").value);*/
-
-
-// console.log(document.querySelector("#firstname").value);
+ 

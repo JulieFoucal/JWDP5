@@ -126,14 +126,15 @@ body {
     padding-bottom: 0;
 }
 
-.color{
-    background-color:blueviolet;
-    height:2vw;
+.color {
+    background-color: blueviolet;
+    height: 2vw;
     margin-top: 70px;
     text-align: center;
-    width:8%;
-    font-size:1.3em;
+    width: 8%;
+    font-size: 1.3em;
 }
+
 .imgproduitpanier {
     width: 15%;
     height: 8vw;
@@ -203,6 +204,21 @@ body {
     width: 100%;
     border-top: 1px solid #BCBCBC;
     margin-top: 30px;
+    text-align: center;
+}
+
+.questionnaire {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-control{
+    text-align: center;
+    width:100%;
 }
 
 .label-margin {
@@ -223,7 +239,7 @@ body {
 
 .btn-commander {
     background-color: rgb(226, 167, 167);
-    width: 40%;
+    width: 30%;
     height: 2vw;
     border-radius: 10px 10px 10px 10px;
     border-color: transparent;

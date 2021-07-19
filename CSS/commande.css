@@ -92,6 +92,10 @@ body {
     margin-right: auto;
 }
 
+.remerciement{
+    text-align: center;
+}
+
 .detailcommande{
     width:100%;
     height: 28vw;

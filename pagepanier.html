@@ -65,38 +65,40 @@
         
         <div class="passercommande" id="passercommande">
             <h3 class="order">Passer commande</h3>
-            <form id="inscription" >
+            <div class="questionnaire">
+            <form id="inscription">
                 <div class="label-margin" for="firstname" >
                     Prénom
-                <input id="prenom" type="text" class="form-control prenom" placeholder="First Name">
+                <input id="prenom" type="text" class="form-control prenom" placeholder="First Name" required="true">
                 </div>
                 
-                <div class="label-margin" for="name">
+                <div class="label-margin" for="name" >
                     Nom
-                <input id="nom" type="text" class="form-control nom" placeholder="Name">
+                <input id="nom" type="text" class="form-control nom" placeholder="Name" required="true">
                 </div>
                 <div class="label-margin" for="adress">
                     Adresse postale
-                <input id="adresse" type="text" class="form-control adresse"  placeholder="Adresse">
+                <input id="adresse" type="text" class="form-control adresse"  placeholder="Adresse" required="true">
                 </div>
 
                 <div class="label-margin" for="zipcode">
                     Code postale
-                <input id="zipcode" type="text" class="form-control zipcode"  placeholder="Code Postale">
+                <input id="zipcode" type="text" class="form-control zipcode"  placeholder="Code Postale" required="true">
                 </div>
                 
                 <div class="label-margin" for="city">
                     Ville
-                <input id="ville" type="text" class="form-control ville"  placeholder="City">
+                <input id="ville" type="text" class="form-control ville"  placeholder="City" required="true">
                 </div>
                 <div class="label-margin" for="email">
                     Adresse email
-                <input id="email" class="form-control email" type="email"  placeholder="Email">
-                </div>
-                <button class="btn-commander" type="submit" value="Vaidation commande">
+                <input id="email" class="form-control email" type="email"  placeholder="Email" required="true">
+                </div>  
+        </form>
+    </div>
+    <button class="btn-commander" type="submit" value="Vaidation commande">
                     Valider la commande
                 </button>
-        </form>
         </div>
 
     </div>
