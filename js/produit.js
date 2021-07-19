@@ -65,7 +65,7 @@ btnAdd.addEventListener("click", function () {
   })
   if (productIndex === -1) {
     produits.push({
-      id: id,
+      id: id + '-' + color,
       image: image,
       price: price,
       name: name,
@@ -74,7 +74,7 @@ btnAdd.addEventListener("click", function () {
     })
   } else {
     produits[productIndex] = {
-      id: id,
+      id: id + '-' + color,
       image: image,
       price: price,
       color: color,
@@ -83,13 +83,20 @@ btnAdd.addEventListener("click", function () {
     }
   }
   localStorage.setItem('produits', JSON.stringify(produits))
-console.log(produits[productIndex])
 
   let msgTotal = produits.reduce(function (prev, cur) {
     return prev + cur.count;
   }, 0)
   document.querySelector('.number').innerHTML = msgTotal;
   localStorage.setItem('number', msgTotal)
+
+  let totalPrice = products.reduce((acc, item) => {
+    let number = parseInt(item.count);
+    if(!isNaN(number))
+      acc += number;
+    return acc;
+  },0);
+  localStorage.setItem('totalPrice', totalPrice)
 
   alert(name +" (" + color + ") a été ajouté au panier !");
 
