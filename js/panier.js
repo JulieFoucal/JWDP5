@@ -102,6 +102,7 @@ function removeItemFromCard(event) {
   });
   localStorage.setItem('produits', JSON.stringify(products));
   computeTotal();
+  document.querySelector('.number').textContent = computeNumberOfItems();
 }
 
 function changeItemQuantity(event) {

@@ -1,5 +1,5 @@
 API = " http://localhost:3000/api/teddies/";
-const panier = JSON.parse(localStorage.getItem('panier')) || [];
+const produits = JSON.parse(localStorage.getItem('produits')) || [];
 
 var searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get("id");
@@ -58,7 +58,7 @@ btnAdd.addEventListener("click", function () {
   let image = document.querySelector('.imgproduitpanier').getAttribute('src');
   let color = document.querySelector('#color').value
   let price = parseInt(document.querySelector('.priceproduct').innerText);
-  let produits = JSON.parse(localStorage.getItem('produits')) || [];
+  //let produits = JSON.parse(localStorage.getItem('produits')) || [];
   let name = document.querySelector('.nameproduct').innerText;
   let productIndex = produits.findIndex(function (element) {
     return element.id === id && element.color == color;
@@ -90,7 +90,7 @@ btnAdd.addEventListener("click", function () {
   document.querySelector('.number').innerHTML = msgTotal;
   localStorage.setItem('number', msgTotal)
 
-  let totalPrice = products.reduce((acc, item) => {
+  let totalPrice = produits.reduce((acc, item) => {
     let number = parseInt(item.count);
     if(!isNaN(number))
       acc += number;
