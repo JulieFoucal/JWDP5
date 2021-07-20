@@ -104,4 +104,3 @@ btnAdd.addEventListener("click", function () {
 
 
 document.querySelector('.number').innerHTML = localStorage.getItem('number') || 0;
-document.querySelector('.panier').innerHTML = localStorage.getItem('panier') || 0;

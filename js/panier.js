@@ -138,7 +138,7 @@ console.log(boutonCommander);
 
 
 boutonCommander.addEventListener("click", () => {
-  // recuperer les donnees du formulaire 1
+  // recuperer les donnees du formulaire 
   const coordonnees = document.querySelector('.name')
 
   const user = {
@@ -152,6 +152,8 @@ boutonCommander.addEventListener("click", () => {
   for(item in user) {
     if (user[item] === undefined || user[item] === "") {return;}
   }
+
+  //ouvrir  la page validation commande
   localStorage.setItem('user', JSON.stringify(user));
   window.location.href = "pagecommande.html";
 })}
