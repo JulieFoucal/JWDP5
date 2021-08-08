@@ -90,6 +90,7 @@ function ready() {
   computeTotal();
 
 
+
 //enlever un produit du panier et du localStorage
 
 function removeItemFromCard(event) {
@@ -135,32 +136,61 @@ function changeItemQuantity(event) {
 }
 
 let boutonCommander = document.querySelector(".btn-commander");
-console.log(boutonCommander);
 
 
-boutonCommander.addEventListener("click", () => {
-  // recuperer les donnees du formulaire 
-  const coordonnees = document.querySelector('.name')
+boutonCommander.addEventListener("click", function (event) {
+  event.preventDefault();
 
-  const user = {
-  "prenom": document.querySelector("#prenom").value,
-  "nom": document.querySelector("#nom").value,
-  "adresse": document.querySelector("#adresse").value,
-  "zipcode": document.querySelector("#zipcode").value,
-  "email": document.querySelector("#email").value,
-  };
-  console.log(user);
-  for(item in user) {
-    if (user[item] === undefined || user[item] === "") {return;}
+  //verification de tout les champs 
+
+  let monformulaire = document.getElementById("inscription");
+  let products = JSON.parse(localStorage.getItem('produits')) || [];
+
+  let empty =document.querySelector('.empty');
+  let email= document.querySelector('#email').value;
+  let pattern = /^.+@.+\..+$/;
+
+  let form = document.getElementById('inscription');
+  let formData = new FormData(form);
+
+  let processedProducts = [];
+  for(let i of products) {
+    for(let j = 0; j < i.count; j++) {
+      processedProducts.push(i.id.split('-')[0]);
+    }
   }
 
+
+  fetch('http://localhost:3000/api/teddies/order', {
+    method:'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      contact: {
+        firstName: formData.get('prenom'),
+        lastName: formData.get('nom'),
+        address: formData.get('adresse'),
+        city: formData.get('ville'),
+        email: formData.get('email'),
+
+      },
+      products: processedProducts
+    })
+  })
+  .then((response) => response.json())
+  .then((response) => {
+    let totalPrice = localStorage.getItem('totalPrice');
+    localStorage.removeItem('produits');
+    localStorage.setItem('number', "0");
+    localStorage.setItem('totalPrice', "0");
+    window.location.href = `http://127.0.0.1:5500/pagecommande.html?orderId=${response.orderId}&totalPrice=${totalPrice}`;
+  })
+  .catch(error => console.log(error));
+
+  //localStorage.setItem('user', JSON.stringify(user));
+  //window.location.href = "pagecommande.html";
+});
   //ouvrir  la page validation commande
-  localStorage.setItem('user', JSON.stringify(user));
-  window.location.href = "pagecommande.html";
-})}
-
-
-
-      // Enlever les produits du localstorage après validation de la commande
-
- 
+}

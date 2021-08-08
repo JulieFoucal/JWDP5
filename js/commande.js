@@ -1,9 +1,9 @@
-const API = " http://localhost:3000/api/teddies";
 
-const panier = JSON.parse(localStorage.getItem('produits')) || [];
-const price = localStorage.getItem('totalPrice');
+let params = new URLSearchParams(document.location.search.substring(1));
+const price = params.get('totalPrice');
+const num = params.get('orderId');
 
+const numCommande = document.querySelector(".numerocommande");
+numCommande.innerText = num;
 const totalCommande = document.querySelector('.totalcommande');
 totalCommande.innerText = parseFloat(price).toFixed(2) + ' €';
-
-localStorage.removeItem('produits');

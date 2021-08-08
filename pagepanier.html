@@ -69,16 +69,16 @@
             <form id="inscription">
                 <div class="label-margin" for="firstname" >
                     Prénom
-                <input id="prenom" type="text" class="form-control prenom" placeholder="First Name" required="true">
+                <input name="prenom" id="prenom" type="text" class="form-control prenom" placeholder="First Name" required="true">
                 </div>
                 
                 <div class="label-margin" for="name" >
                     Nom
-                <input id="nom" type="text" class="form-control nom" placeholder="Name" required="true">
+                <input name="nom" id="nom" type="text" class="form-control nom" placeholder="Name" required="true">
                 </div>
                 <div class="label-margin" for="adress">
                     Adresse postale
-                <input id="adresse" type="text" class="form-control adresse"  placeholder="Adresse" required="true">
+                <input name="adresse" id="adresse" type="text" class="form-control adresse"  placeholder="Adresse" required="true">
                 </div>
 
                 <div class="label-margin" for="zipcode">
@@ -88,17 +88,19 @@
                 
                 <div class="label-margin" for="city">
                     Ville
-                <input id="ville" type="text" class="form-control ville"  placeholder="City" required="true">
+                <input name="ville" id="ville" type="text" class="form-control ville"  placeholder="City" required="true">
                 </div>
                 <div class="label-margin" for="email">
                     Adresse email
-                <input id="email" class="form-control email" type="email"  placeholder="Email" required="true">
-                </div>  
-        </form>
-    </div>
-    <button class="btn-commander" type="submit" value="Vaidation commande">
+                <input name="email" id="email" class="form-control email" type="email"  placeholder="Email" required="true">
+                <button class="btn-commander" type="submit" value="Validation commande">
                     Valider la commande
                 </button>
+                </div>
+
+        </form>
+    </div>
+    
         </div>
 
     </div>

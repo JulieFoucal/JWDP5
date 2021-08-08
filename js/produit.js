@@ -62,12 +62,13 @@ btnAdd.addEventListener("click", function () {
   let name = document.querySelector('.nameproduct').innerText;
   let productIndex = produits.findIndex(function (element) {
     return element.id === id && element.color == color;
-  })
+  });
   if (productIndex === -1) {
     produits.push({
       id: id + '-' + color,
       image: image,
       price: price,
+      itemsPrice: price,
       name: name,
       color: color,
       count: 1
@@ -77,6 +78,7 @@ btnAdd.addEventListener("click", function () {
       id: id + '-' + color,
       image: image,
       price: price,
+      itemsPrice: produits[productIndex].itemsPrice + price,
       color: color,
       name: name,
       count: produits[productIndex].count + 1
@@ -90,12 +92,12 @@ btnAdd.addEventListener("click", function () {
   document.querySelector('.number').innerHTML = msgTotal;
   localStorage.setItem('number', msgTotal)
 
-  let totalPrice = produits.reduce((acc, item) => {
-    let number = parseInt(item.count);
-    if(!isNaN(number))
-      acc += number;
-    return acc;
-  },0);
+
+  let totalPrice = 0;
+  for(let i of produits) {
+    totalPrice += i.itemsPrice;
+  }
+  console.log(totalPrice);
   localStorage.setItem('totalPrice', totalPrice)
 
   alert(name +" (" + color + ") a été ajouté au panier !");
