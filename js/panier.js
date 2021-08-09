@@ -137,13 +137,14 @@ function changeItemQuantity(event) {
 
 let boutonCommander = document.querySelector(".btn-commander");
 
+let monformulaire = document.getElementById("inscription");
 
-boutonCommander.addEventListener("click", function (event) {
+monformulaire.addEventListener("submit", function (event) {
   event.preventDefault();
 
   //verification de tout les champs 
 
-  let monformulaire = document.getElementById("inscription");
+  
   let products = JSON.parse(localStorage.getItem('produits')) || [];
 
   let empty =document.querySelector('.empty');
@@ -168,7 +169,7 @@ boutonCommander.addEventListener("click", function (event) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      contact: {
+        contact: {
         firstName: formData.get('prenom'),
         lastName: formData.get('nom'),
         address: formData.get('adresse'),
@@ -185,7 +186,7 @@ boutonCommander.addEventListener("click", function (event) {
     localStorage.removeItem('produits');
     localStorage.setItem('number', "0");
     localStorage.setItem('totalPrice', "0");
-    window.location.href = `http://127.0.0.1:5500/pagecommande.html?orderId=${response.orderId}&totalPrice=${totalPrice}`;
+    window.location.href = `/pagecommande.html?orderId=${response.orderId}&totalPrice=${totalPrice}`;
   })
   .catch(error => console.log(error));
 

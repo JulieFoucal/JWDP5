@@ -69,12 +69,12 @@
             <form id="inscription">
                 <div class="label-margin" for="firstname" >
                     Prénom
-                <input name="prenom" id="prenom" type="text" class="form-control prenom" placeholder="First Name" required="true">
+                <input name="prenom" id="prenom" type="text" class="form-control prenom" placeholder="First Name" required >
                 </div>
                 
                 <div class="label-margin" for="name" >
                     Nom
-                <input name="nom" id="nom" type="text" class="form-control nom" placeholder="Name" required="true">
+                <input name="nom" id="nom" type="text" class="form-control nom" placeholder="Name" required>
                 </div>
                 <div class="label-margin" for="adress">
                     Adresse postale
@@ -92,7 +92,7 @@
                 </div>
                 <div class="label-margin" for="email">
                     Adresse email
-                <input name="email" id="email" class="form-control email" type="email"  placeholder="Email" required="true">
+                <input name="email" id="email" class="form-control email" type="email"  placeholder="Email" required="true" pattern="^.+@.+\..+$">
                 <button class="btn-commander" type="submit" value="Validation commande">
                     Valider la commande
                 </button>
