@@ -38,19 +38,6 @@ fetch(API + id)
 
 
 
-// function ajoutAuPanier() {
-//     const colorTag = document.getElementById('color');
-//     const addTeddy = {
-//         _id: currentTeddy._id,
-//         name: currentTeddy.name,
-//         price: currentTeddy.price,
-//         color: colorTag.value,
-//         quantity: 1
-//     }
-    
-//     panier.push(addTeddy);
-//     localStorage.setItem('panier', JSON.stringify(panier))
-// }
 
 let btnAdd = document.querySelector('.btnajoutpanier');
 btnAdd.addEventListener("click", function () {
@@ -84,11 +71,15 @@ btnAdd.addEventListener("click", function () {
       count: produits[productIndex].count + 1
     }
   }
+
+
   localStorage.setItem('produits', JSON.stringify(produits))
 
   let msgTotal = produits.reduce(function (prev, cur) {
     return prev + cur.count;
   }, 0)
+
+
   document.querySelector('.number').innerHTML = msgTotal;
   localStorage.setItem('number', msgTotal)
 
@@ -97,11 +88,8 @@ btnAdd.addEventListener("click", function () {
   for(let i of produits) {
     totalPrice += i.itemsPrice;
   }
-  console.log(totalPrice);
   localStorage.setItem('totalPrice', totalPrice)
-
   alert(name +" (" + color + ") a été ajouté au panier !");
-
 });
 
 
