@@ -1,0 +1,467 @@
+@media screen and (max-width : 1609px) {
+
+    
+    .carteproduit{
+        width: 100%;
+        
+    }
+    .contenudescription{
+        width: 75%;
+        height:30vw;
+    }
+    .contenucarteimg{
+        width: 20%;
+    }
+
+    .carteprix{
+        height:5vw;
+    }
+
+    .priceproduct{
+        font-size: 2.4em;
+        padding-top:40px;
+    }
+
+    .nameproduct{
+        font-size:2em;
+    }
+    .iconepanier{
+        display: none;
+    }
+    .number{
+        display: none
+    }
+    .container0 {
+        height: 150vw;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+
+    }
+
+    .container1 {
+        width: 80%;
+        height: 150vw;
+        text-align: center;
+    }
+
+    .carteteddy {
+        width: 60%;
+        margin-top: 25px;
+        padding-bottom: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teddydescription {
+        font-size: 14px;
+        width: 100%;
+        height: 3vw;
+
+        margin-top: 25px;
+    }
+
+    .contenuteddyname {
+        height: 30px;
+    }
+
+    .teddyname {
+        font-size: 40px;
+    }
+
+    .voirproduit {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width : 1143px) {
+    
+    
+    .container0 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 180vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container1 {
+        margin-left: 120px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .carteteddy {
+        width: 80%;
+        height: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imgteddy {
+        height: 18vw;
+    }
+}
+
+@media screen and (max-width : 800px) {
+
+    .carteprix{
+        height:5vw;
+    }
+
+    .priceproduct{
+        font-size: 2.4em;
+        padding-top:40px;
+    }
+
+    .nameproduct{
+        font-size:2em;
+    }
+    .container0 {
+        height: 150vw;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 250vw;
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .imgteddy {
+        height: 25vw;
+    }
+
+    .carteteddy {
+        width: 70%;
+        margin-top: 25px;
+        height: 40vw;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teddydescription {
+        font-size: 14px;
+        width: 100%;
+        height: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35px;
+    }
+
+    .contenuteddyname {
+        height: 20px;
+    }
+
+    .teddyname {
+        font-size: 40px;
+    }
+
+    .voirproduit {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width : 800px) {
+
+    .header {
+        height: 15vw;
+    }
+
+    .barre {
+        height: 10vw;
+        font-size: 20px;
+    }
+    .monpanier {
+        width: 50%;
+    }
+
+    .container0 {
+        height: 150vw;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 250vw;
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .imgteddy {
+        height: 25vw;
+    }
+
+    .carteteddy {
+        width: 70%;
+        margin-top: 25px;
+        height: 40vw;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teddydescription {
+        font-size: 14px;
+        width: 100%;
+        height: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35px;
+    }
+
+    .contenuteddyname {
+        height: 20px;
+    }
+
+    .teddyname {
+        font-size: 40px;
+    }
+
+    .voirproduit {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width : 460px) {
+
+    .carteproduit{
+        height:50vw;
+        background-color:blue;
+    }
+    .carteprix{
+        height:10vw;
+    }
+
+    .priceproduct{
+        font-size: 2.4em;
+        padding-top:40px;
+    }
+
+    .nameproduct{
+        font-size:2em;
+    }
+
+    .barre {
+        height: 10vw;
+        font-size: 15px;
+    }
+
+    .monpanier {
+        width: 50%;
+    }
+
+    .container0 {
+        height: 430vw;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .imgteddy {
+        height: 22vw;
+    }
+
+    .carteteddy {
+        width: 90%;
+        margin-top: 25px;
+        height: 60vw;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teddydescription {
+        font-size: 13px;
+        width: 100%;
+        height: 5vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35px;
+    }
+
+    .contenuteddyname {
+        height: 30px;
+    }
+
+    .teddyname {
+        font-size: 40px;
+    }
+
+    .teddyprice {
+        padding-top: 30px;
+    }
+
+    .voirproduit {
+        font-size: 20px;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width : 300px) {
+
+    .containerproduit{
+        height:300vw;
+        background-color:cyan;
+    }
+    .carteproduit{
+        width: 100%;
+        height: 100vw;
+        background-color: pink;
+        
+    }
+    .contenudescription{
+        width: 65%;
+        height:30vw;
+        background-color:yellow;
+    }
+    .contenucarteimg{
+        width: 20%;
+    }
+
+    .carteprix{
+        height:5vw;
+    }
+
+    .priceproduct{
+        font-size: 2.4em;
+        padding-top:40px;
+    }
+
+    .nameproduct{
+        font-size:2em;
+    }
+
+    .container0 {
+        height: 430vw;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .imgteddy {
+        height: 22vw;
+    }
+
+    .carteteddy {
+        width: 90%;
+        margin-top: 25px;
+        height: 60vw;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teddydescription {
+        font-size: 13px;
+        width: 100%;
+        height: 5vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35px;
+    }
+
+    .contenuteddyname {
+        height: 30px;
+    }
+
+    .teddyname {
+        font-size: 40px;
+    }
+
+    .teddyprice {
+        padding-top: 30px;
+    }
+
+    .voirproduit {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width : 351px) {
+
+    .container0 {
+        height: 450vw;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        background-color: yellow;
+
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    .imgteddy {
+        height: 22vw;
+    }
+
+    .carteteddy {
+        width: 90%;
+        margin-top: 25px;
+        height: 70vw;
+        padding-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .teddydescription {
+        font-size: 13px;
+        width: 100%;
+        height: 5vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    .contenuteddyname {
+        height: 30px;
+    }
+
+    .teddyname {
+        font-size: 40px;
+    }
+
+    .teddyprice {
+        padding-top: 30px;
+    }
+
+    .voirproduit {
+        font-size: 20px;
+        padding-top: 30px;
+    }
+}
