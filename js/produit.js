@@ -19,10 +19,6 @@ function getParameter(teddy) {
 
     let price = document.querySelector('.priceproduct');
     price.innerText = `${ (teddy.price/100).toFixed(2)} €`
-    console.log(src);
-    console.log(teddy);
-    console.log(description)
-
 }
 
 

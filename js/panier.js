@@ -63,6 +63,7 @@ function computeTotal() {
 
   let totalPriceDOM = document.querySelector('.totalprice');
   totalPriceDOM.innerText = parseInt(localStorage.getItem('totalPrice')).toFixed(2) + ' €';
+  return total;
 }
 
 function computeNumberOfItems() {
