@@ -115,7 +115,7 @@ body {
 .carteteddy {
     background-color: rgb(216, 97, 97);
     width: 28%;
-    height: 22vw;
+    height: 24vw;
     border-radius: 23px 23px 23px 23px;
     text-decoration: none;
     text-align: center;
@@ -124,7 +124,7 @@ body {
 
 .imgteddy {
     width: 100%;
-    height: 13vw;
+    height:15vw;
     object-fit: cover;
     border-radius: 23px 23px 0px 0px;
 }
@@ -145,7 +145,7 @@ body {
 }
 
 .teddyname {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -164,7 +164,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     color: white;
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 .voirproduit {
