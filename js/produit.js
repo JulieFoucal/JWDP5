@@ -4,33 +4,33 @@ const produits = JSON.parse(localStorage.getItem('produits')) || [];
 var searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get("id");
 
-
+console.log(id);
 
 let currentTeddy
 
 function getParameter(teddy) {
-  currentTeddy = teddy
-  let src = document.querySelector('.imgproduitpanier').src = `${teddy.imageUrl}`;
-  let name = document.querySelector('.nameproduct');
-  let description = document.querySelector('.imgdescription');
+    currentTeddy = teddy
+    let src = document.querySelector('.imgproduitpanier').src = `${teddy.imageUrl}`;
+    let name = document.querySelector('.nameproduct');
+    let description = document.querySelector('.imgdescription');
 
-  description.innerText = `${teddy.description}`
-  name.innerText = `${teddy.name}`
+    description.innerText = `${teddy.description}`
+    name.innerText = `${teddy.name}`
 
-  let price = document.querySelector('.priceproduct');
-  price.innerText = `${ (teddy.price/100).toFixed(2)} €`
+    let price = document.querySelector('.priceproduct');
+    price.innerText = `${ (teddy.price/100).toFixed(2)} €`
 }
 
 
 
 fetch(API + id)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(getParameter)
-  .catch(function (error) {
-    console.log(error)
-  });
+    .then(function (response) {
+        return response.json();
+    })
+    .then(getParameter)
+    .catch(function (error) {
+        console.log(error)
+    });
 
 
 
@@ -81,11 +81,11 @@ btnAdd.addEventListener("click", function () {
 
 
   let totalPrice = 0;
-  for (let i of produits) {
+  for(let i of produits) {
     totalPrice += i.itemsPrice;
   }
   localStorage.setItem('totalPrice', totalPrice)
-  alert(name + " (" + color + ") a été ajouté au panier !");
+  alert(name +" (" + color + ") a été ajouté au panier !");
 });
 
 
