@@ -7,7 +7,7 @@ body {
 
 .header {
     display: flex;
-    background-color: rgb(219, 181, 219);
+    background-color: rgb(246, 228, 246);
     width: 100%;
     height: 8vw;
     justify-content: space-between;
@@ -59,7 +59,6 @@ body {
 }
 
 .containerproduct {
-    background-color: blue;
     width: 100%;
     height: 40vw;
 }
@@ -104,7 +103,7 @@ body {
 .ligneproduit {
     display: flex;
     flex-wrap: wrap;
-    background-color: yellow;
+    background-color:white;
     width: 98%;
     height: 10vw;
     margin-top: 10px;
@@ -114,18 +113,17 @@ body {
 .name {
     display: flex;
     flex-wrap: wrap;
-    background-color: red;
-    width: 15%;
+    width: 10%;
+    justify-content:center;
     height: 5vw;
-    margin-top: 25px;
+    margin-top: 50px;
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
 .color {
-    background-color: blueviolet;
-    height: 2vw;
-    margin-top: 70px;
+    height: 5vw;
+    margin-top: 50px;
     text-align: center;
     width: 8%;
     font-size: 1.3em;
@@ -144,9 +142,8 @@ body {
 
 .quantite {
     display: flex;
-    background-color: pink;
     width: 9%;
-    margin-top: auto;
+    margin-top: 50px;
     margin-bottom: auto;
     font-size: 1.4em;
 }
@@ -159,22 +156,19 @@ body {
 
 .prixproduitpanier {
     display: flex;
-    background-color: cyan;
     width: 7%;
-    margin-top: auto;
+    margin-top: 50px;
     margin-bottom: auto;
     font-size: 1.4em;
 }
 
 .btnremove {
-    background-color: rgb(202, 172, 172);
     width: 19%;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .btn-remove {
-    background-color: red;
     border-radius: 10px 10px 10px 10px;
     width: 90%;
     font-size: 1.3em;
@@ -204,7 +198,6 @@ body {
 }
 
 .questionnaire {
-    background-color: blue;
     display: flex;
     align-items: center;
     width: 30%;

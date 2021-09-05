@@ -1,14 +1,41 @@
 @media screen and (max-width : 1609px) {
 
-
-    .carteproduit {
-        width: 100%;
-
+    .grandcontainermobile {
+        height: 190vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    #inscription{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .carteproduit {
+        height: 100vw;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .imgdescriptionmobile {
+        font-size: 15px;
+    }
+
+
     .contenudescription {
-        width: 75%;
-        height: 30vw;
+        width: 100%;
+        border-radius: 0px 0px 23px 23px;
+    }
+
+
+    .imgproduitpaniermobile {
+        width: 40%;
+    }
+
+    .contenumobile {
+        width: 30%;
+        border-radius: 0px 0px 0px 0px;
+
     }
 
     .contenucarteimg {
@@ -87,12 +114,16 @@
     .contenucarteimg {
         width: 100%;
     }
-    
+
 
 }
 
 @media screen and (max-width : 1143px) {
-
+    .grandcontainermobile {
+        height: 110vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .container0 {
         margin-left: auto;
@@ -122,16 +153,46 @@
         height: 18vw;
     }
 
-    .btnajoutpanier{
-        top:200px;
+    .btnajoutpanier {
+        top: 200px;
         left: -250px;
         font-size: 12px;
-        width:20%;
-        height:3vw;
-}
+        width: 20%;
+        height: 3vw;
+    }
 }
 
 @media screen and (max-width : 800px) {
+
+    .grandcontainermobile {
+        height: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .carteproduit {
+        height: 90vw;
+        width: 100%;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .questionnaire {
+        width: 100%;
+    }
+
+    #inscription{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .imgdescriptionmobile {
+        font-size: 15px;
+    }
+
+    .imgproduitpanier {
+        border-radius: 23px 23px 0px 0px;
+    }
 
     .carteprix {
         height: 5vw;
@@ -196,12 +257,18 @@
     }
 
     .barre {
-        height: 10%;
+        height: 20%;
+    }
+    .barreitems{
+        width: 100%;
+    }
+    .monpanier{
+        width: 40%;
     }
 
     .descrip {
-        height: 40vw;
-        font-size: 13px;
+        width: 97%;
+        border-radius: 0px 0px 23px 23px;
     }
 
     .priceproduct {
@@ -209,24 +276,62 @@
         margin-top: 5px;
     }
 
-    .btnajoutpanier{
-        top:200px;
+    .btnajoutpanier {
+        top: 360px;
         left: -150px;
         font-size: 12px;
-        width:20%;
-        height:3vw;
-}
+        width: 30%;
+        height: 3vw;
+    }
+
+    .contenucarteimg {
+
+        border-radius: 23px 23px 0px 0px;
+    }
 }
 
 
 @media screen and (max-width : 520px) {
 
+    .grandcontainermobile {
+        height: 190vw;
+
+    }
+
     .carteproduit {
-        height: 50vw;
+        height: 130vw;
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .imgproduitpanier {
+        border-radius: 23px 23px 0px 0px;
     }
 
     .carteprix {
-        height: 10vw;
+        height: 20vw;
+        width: 98%;
+    }
+
+    .color {
+        width: 25%;
+    }
+
+    .priceproductmobile {
+        font-size: 8px;
+        ;
+    }
+
+    .contenumobile {
+        width: 100%;
+        height: 80vw;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .descrip {
+        width: 97%;
+        border-radius: 0px 0px 23px 23px;
     }
 
     .priceproduct {
@@ -273,6 +378,7 @@
         padding-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
+
     }
 
     .teddydescription {
@@ -282,6 +388,10 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 14px;
+    }
+
+    .totalpanier{
+        height:10vw;
     }
 
     .contenuteddyname {
@@ -302,9 +412,7 @@
     }
 
 
-    .contenucarteimg {
-        height: 30vw;
-    }
+
 
     .priceproduct {
         font-size: 25px;
@@ -319,139 +427,35 @@
         font-size: 18px;
     }
 
-    .btnajoutpanier{
-        top:150px;
-        left: -130px;
+    .btnmobile {
+        top: 270px;
+        left: -170px;
         font-size: 10px;
-        width:30%;
-        height:5vw;
-}
-.questionnaire{
-    width:100%;
-}
-
-.containerproduit2{
-    display: none;
-}
-
-.remerciement{
-    font-size:20px;
-}
-
-.detailcommande{
-    font-size: 12px;
-}
-}
-
-@media screen and (max-width : 350px) {
-
-    .grandcontainer{
-        height: 100%;
-    }
-    .containerproduit {
-        height: 120vw;
-        background-color: cyan;
-    }
-
-    .carteproduit {
-        width: 100%;
-        height: 90vw;
-        background-color: pink;
-        margin-top: 20px;
-
-    }
-
-    .contenudescription {
-        width: 50%;
-        height: 60vw;
-        font-size: 8px;
-    }
-
-    .contenucarteimg {
-        height: 22vw;
-    }
-
-    .carteprix {
+        width: 40%;
         height: 5vw;
     }
 
-    .priceproduct {
-        font-size: 2.3em;
-        padding-top: 150px;
-    }
-
-    .nameproduct {
-        font-size: 2em;
-    }
-
-    .container0 {
-        height: 430vw;
-        margin-left: auto;
-        margin-right: auto;
+    .questionnaire {
         width: 100%;
-
     }
 
-    .container1 {
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-        margin-left: 0;
+    .containerproduit2 {
+        display: none;
     }
 
-    .imgteddy {
-        height: 40vw;
+    .remerciement {
+        font-size: 15px;
     }
 
-    .carteteddy {
-        width: 90%;
-        margin-top: 25px;
-        height: 90vw;
-        padding-bottom: 30px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .teddydescription {
-        font-size: 13px;
-        width: 100%;
-        height: 5vw;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25px;
-    }
-
-    .contenuteddyname {
-        height: 10px;
-    }
-
-
-    .teddyname {
-        font-size: 30px;
-        margin-top: 50px;
-    }
-
-    .teddyprice {
-        padding-top: 50px;
-    }
-
-    .voirproduit {
-        font-size: 20px;
-    }
-
-    .btnajoutpanier{
-        top:300px;
-        font-size: 7px;
-        width:30%;
-    }
-    .footer{
-        margin-top: 20vw;
-    }
-    .btnajoutpanier{
-        top:300px;
-        left: -150px;
+    .detailcommande {
         font-size: 10px;
-        width:40%;
-        height:5vw;
-}
+    }
+
+    .barreitems {
+        font-size: 12px;
+    }
+
+    .imgdescriptionmobile {
+        font-size: 12px;
+    }
 }

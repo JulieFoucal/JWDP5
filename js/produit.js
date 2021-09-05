@@ -4,7 +4,7 @@ const produits = JSON.parse(localStorage.getItem('produits')) || [];
 var searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get("id");
 
-console.log(id);
+
 
 let currentTeddy
 
