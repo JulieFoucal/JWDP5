@@ -56,7 +56,7 @@ if (document.readyState == 'loading') {
 function computeTotal() {
   let products = JSON.parse(localStorage.getItem('produits')) || [];
   let total = 0;
-  for(product of products) {
+  for (product of products) {
     total += product.itemsPrice;
   }
   localStorage.setItem('totalPrice', total);
@@ -70,10 +70,10 @@ function computeNumberOfItems() {
   let products = JSON.parse(localStorage.getItem('produits')) || [];
   let total = products.reduce((acc, item) => {
     let number = parseInt(item.count);
-    if(!isNaN(number))
+    if (!isNaN(number))
       acc += number;
     return acc;
-  },0);
+  }, 0);
   return total;
 }
 
@@ -92,107 +92,107 @@ function ready() {
 
 
 
-//enlever un produit du panier et du localStorage
+  //enlever un produit du panier et du localStorage
 
-function removeItemFromCard(event) {
-  let button = event.target;
-  let toDeleteId = button.parentElement.parentElement.id;
-  button.parentElement.parentElement.remove();
-  let products = JSON.parse(localStorage.getItem('produits')) || [];
-  products = products.filter((product) => {
+  function removeItemFromCard(event) {
+    let button = event.target;
+    let toDeleteId = button.parentElement.parentElement.id;
+    button.parentElement.parentElement.remove();
+    let products = JSON.parse(localStorage.getItem('produits')) || [];
+    products = products.filter((product) => {
       return product.id !== toDeleteId;
-  });
-  localStorage.setItem('produits', JSON.stringify(products));
-  computeTotal();
-  document.querySelector('.number').textContent = computeNumberOfItems();
-}
-
-function changeItemQuantity(event) {
-  let value = event.target.value;
-  let id  = event.target.parentElement.parentElement.id;
-  let products = JSON.parse(localStorage.getItem('produits')) || [];
-  let itemsPrice = 0;
-  for(product of products) {
-    if(product.id === id) {
-      product.count = parseInt(value);
-      product.itemsPrice = product.price * value;
-      itemsPrice = product.itemsPrice;
-    }
+    });
+    localStorage.setItem('produits', JSON.stringify(products));
+    computeTotal();
+    document.querySelector('.number').textContent = computeNumberOfItems();
   }
-  localStorage.setItem('produits', JSON.stringify(products));
-  let priceItems = document.querySelectorAll('.prixproduitpanier');
-  priceItems.forEach(item => {
-      if(item.parentElement.id === id) {
+
+  function changeItemQuantity(event) {
+    let value = event.target.value;
+    let id = event.target.parentElement.parentElement.id;
+    let products = JSON.parse(localStorage.getItem('produits')) || [];
+    let itemsPrice = 0;
+    for (product of products) {
+      if (product.id === id) {
+        product.count = parseInt(value);
+        product.itemsPrice = product.price * value;
+        itemsPrice = product.itemsPrice;
+      }
+    }
+    localStorage.setItem('produits', JSON.stringify(products));
+    let priceItems = document.querySelectorAll('.prixproduitpanier');
+    priceItems.forEach(item => {
+      if (item.parentElement.id === id) {
         item.textContent = parseFloat(itemsPrice).toFixed(2) + ' €';
       }
-  });
+    });
 
-  let totalPrice = products.reduce((acc,item) => {
-    acc += item.itemsPrice;
-    return acc;
-  }, 0);
-  localStorage.setItem('totalPrice', totalPrice);
-  document.querySelector('.totalprice').textContent = parseFloat(totalPrice).toFixed(2)+ ' €';
-  document.querySelector('.number').textContent = computeNumberOfItems();
-}
-
-let boutonCommander = document.querySelector(".btn-commander");
-
-let monformulaire = document.getElementById("inscription");
-
-monformulaire.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  //verification de tout les champs 
-
-  
-  let products = JSON.parse(localStorage.getItem('produits')) || [];
-
-  let empty =document.querySelector('.empty');
-  let email= document.querySelector('#email').value;
-  let pattern = /^.+@.+\..+$/;
-
-  let form = document.getElementById('inscription');
-  let formData = new FormData(form);
-
-  let processedProducts = [];
-  for(let i of products) {
-    for(let j = 0; j < i.count; j++) {
-      processedProducts.push(i.id.split('-')[0]);
-    }
+    let totalPrice = products.reduce((acc, item) => {
+      acc += item.itemsPrice;
+      return acc;
+    }, 0);
+    localStorage.setItem('totalPrice', totalPrice);
+    document.querySelector('.totalprice').textContent = parseFloat(totalPrice).toFixed(2) + ' €';
+    document.querySelector('.number').textContent = computeNumberOfItems();
   }
 
+  let boutonCommander = document.querySelector(".btn-commander");
 
-  fetch('http://localhost:3000/api/teddies/order', {
-    method:'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        contact: {
-        firstName: formData.get('prenom'),
-        lastName: formData.get('nom'),
-        address: formData.get('adresse'),
-        city: formData.get('ville'),
-        email: formData.get('email'),
+  let monformulaire = document.getElementById("inscription");
 
-      },
-      products: processedProducts
-    })
-  })
-  .then((response) => response.json())
-  .then((response) => {
-    let totalPrice = localStorage.getItem('totalPrice');
-    localStorage.removeItem('produits');
-    localStorage.setItem('number', "0");
-    localStorage.setItem('totalPrice', "0");
-    window.location.href = `/pagecommande.html?orderId=${response.orderId}&totalPrice=${totalPrice}`;
-  })
-  .catch(error => console.log(error));
+  monformulaire.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  //localStorage.setItem('user', JSON.stringify(user));
-  //window.location.href = "pagecommande.html";
-});
+    //verification de tout les champs 
+
+
+    let products = JSON.parse(localStorage.getItem('produits')) || [];
+
+    let empty = document.querySelector('.empty');
+    let email = document.querySelector('#email').value;
+    let pattern = /^.+@.+\..+$/;
+
+    let form = document.getElementById('inscription');
+    let formData = new FormData(form);
+
+    let processedProducts = [];
+    for (let i of products) {
+      for (let j = 0; j < i.count; j++) {
+        processedProducts.push(i.id.split('-')[0]);
+      }
+    }
+
+
+    fetch('http://localhost:3000/api/teddies/order', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          contact: {
+            firstName: formData.get('prenom'),
+            lastName: formData.get('nom'),
+            address: formData.get('adresse'),
+            city: formData.get('ville'),
+            email: formData.get('email'),
+
+          },
+          products: processedProducts
+        })
+      })
+      .then((response) => response.json())
+      .then((response) => {
+        let totalPrice = localStorage.getItem('totalPrice');
+        localStorage.removeItem('produits');
+        localStorage.setItem('number', "0");
+        localStorage.setItem('totalPrice', "0");
+        window.location.href = `/pagecommande.html?orderId=${response.orderId}&totalPrice=${totalPrice}`;
+      })
+      .catch(error => console.log(error));
+
+    //localStorage.setItem('user', JSON.stringify(user));
+    //window.location.href = "pagecommande.html";
+  });
   //ouvrir  la page validation commande
 }

@@ -1,4 +1,3 @@
-
 let params = new URLSearchParams(document.location.search.substring(1));
 const price = params.get('totalPrice');
 const num = params.get('orderId');
