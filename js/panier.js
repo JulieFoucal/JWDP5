@@ -14,30 +14,22 @@ const contenant = document.getElementById('containerproduit2');
 for (const article of panier) {
   const content = `
   <div class="ligneproduit" id="${article.id}">
-
-
-
                 <div class="imgproduitpanier" id="produit">
                     <img src="${article.image}" alt="imageproduitpanier" class="imageproduitpanier">
                 </div>
-
                 <div class="name" id="name"  alt="nameproduit" class="nameproduit">
                 ${article.name} 
                 </div>
-
                 <div class="color" id="color">
                 ${article.color}
                 </div>
-
                 <div class="quantite">
                     quantity
                     <input class="cart-quantity" type="number" value="${ article.count || 1}"  min="1"/>
                 </div>
-
                 <div class="prixproduitpanier" id="prix">
                 ${ article.itemsPrice ? (article.itemsPrice).toFixed(2) : (article.price).toFixed(2)} €
                 </div>
-
                 <div class="btnremove">
                     <button  class="btn-remove" type="button">ENLEVER DU PANIER</button>
                 </div>
