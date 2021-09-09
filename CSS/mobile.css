@@ -119,7 +119,7 @@
 
 }
 
-@media screen and (max-width : 1143px) {
+@media screen and (max-width : 1365px) {
     .grandcontainermobile {
         height: 110vw;
         margin-left: auto;
@@ -163,7 +163,7 @@
     }
 }
 
-@media screen and (max-width : 800px) {
+@media screen and (max-width : 813px) {
 
     .grandcontainermobile {
         height: 100vw;
