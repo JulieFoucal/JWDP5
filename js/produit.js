@@ -8,6 +8,7 @@ console.log(id);
 
 let currentTeddy
 
+//fonction voir plus "produit"//
 function getParameter(teddy) {
     currentTeddy = teddy
     let src = document.querySelector('.imgproduitpanier').src = `${teddy.imageUrl}`;
@@ -34,7 +35,7 @@ fetch(API + id)
 
 
 
-
+//Action ajout du produit au panier//
 let btnAdd = document.querySelector('.btnajoutpanier');
 btnAdd.addEventListener("click", function () {
 
@@ -75,7 +76,7 @@ btnAdd.addEventListener("click", function () {
     return prev + cur.count;
   }, 0)
 
-
+//action +1 produit dans le panier//
   document.querySelector('.number').innerHTML = msgTotal;
   localStorage.setItem('number', msgTotal)
 

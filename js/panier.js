@@ -3,14 +3,15 @@
 const numbertag = document.querySelector('.number')
 console.log(numbertag);
 
+//chargement du nombre de produits dans le panier//
 numbertag.innerHTML = computeNumberOfItems();
 
-//recuperer les produits dans le local storage
-
+//recuperer les produits dans le local storage//
 API = " http://localhost:3000/api/teddies/";
 const panier = JSON.parse(localStorage.getItem('produits')) || [];
 const contenant = document.getElementById('containerproduit2');
 
+//html ligne produit présente dans le panier//
 for (const article of panier) {
   const content = `
   <div class="ligneproduit" id="${article.id}">
@@ -45,6 +46,8 @@ if (document.readyState == 'loading') {
   ready()
 }
 
+
+//fonction calcul du prix total dans le panier//
 function computeTotal() {
   let products = JSON.parse(localStorage.getItem('produits')) || [];
   let total = 0;
@@ -58,6 +61,8 @@ function computeTotal() {
   return total;
 }
 
+
+//fonction calcul du nombre de produits dans le panier//
 function computeNumberOfItems() {
   let products = JSON.parse(localStorage.getItem('produits')) || [];
   let total = products.reduce((acc, item) => {
@@ -70,7 +75,7 @@ function computeNumberOfItems() {
 }
 
 
-//declaration de la fonction ready enlever un article du panier
+//fonction enlever un article du panier//
 function ready() {
   const removeBtns = document.querySelectorAll('.btn-remove')
   removeBtns.forEach((btn) => {
@@ -84,8 +89,7 @@ function ready() {
 
 
 
-  //enlever un produit du panier et du localStorage
-
+  //enlever un produit du panier et du localStorage//
   function removeItemFromCard(event) {
     let button = event.target;
     let toDeleteId = button.parentElement.parentElement.id;
@@ -99,6 +103,7 @@ function ready() {
     document.querySelector('.number').textContent = computeNumberOfItems();
   }
 
+  //Fonction pour changer la quantité des produits voulues dans le panier//
   function changeItemQuantity(event) {
     let value = event.target.value;
     let id = event.target.parentElement.parentElement.id;
@@ -111,6 +116,7 @@ function ready() {
         itemsPrice = product.itemsPrice;
       }
     }
+    
     localStorage.setItem('produits', JSON.stringify(products));
     let priceItems = document.querySelectorAll('.prixproduitpanier');
     priceItems.forEach(item => {
