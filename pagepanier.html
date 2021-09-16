@@ -66,29 +66,29 @@
                     <div class="label-margin" for="firstname">
                         Prénom
                         <input name="prenom" id="prenom" type="text" class="form-control prenom"
-                            placeholder="Julie" pattern = '[a-zéèêî\ ]{2,30}' required="required">
+                            placeholder="Julie" pattern = '[a-zéèêî]{2,30}' required="required">
                     </div>
 
                     <div class="label-margin" for="name">
                         Nom
-                        <input name="nom" id="nom" placeholder="Foucal" type="text" class="form-control nom" pattern = '[a-zéèêî\ ]{2,30}' required="required">
+                        <input name="nom" id="nom" placeholder="Foucal" type="text" class="form-control nom" pattern = '[a-zéèêî]{2,30}' required="required">
                     </div>
                     <div class="label-margin" for="adress">
                         Adresse postale
                         <input name="adresse" id="adresse" type="text" class="form-control adresse"
-                            placeholder="43 rue de la paix" pattern = '[A-z\ ]{2,30}' required="required">
+                            placeholder="43 rue de la paix" pattern = '[A-z]{2,30}' required="required">
                     </div>
 
                     <div class="label-margin" for="zipcode">
                         Code postale
                         <input id="zipcode" placeholder="83 600" type="text" class="form-control zipcode" 
-                       pattern='[0-9]{10}' required="required">
+                       pattern='^[0-9]{5}$' required="required">
                     </div>
 
                     <div class="label-margin" for="city">
                         Ville
                         <input name="ville" id="ville" type="text" class="form-control ville" placeholder="Fréjus"
-                        pattern = '[A-z\ ]{2,30}' required="required">
+                        pattern = '[A-z]{2,30}' required="required">
                     </div>
                     <div class="label-margin" for="email">
                         Adresse email
