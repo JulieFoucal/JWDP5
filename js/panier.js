@@ -142,8 +142,6 @@ function ready() {
     event.preventDefault();
 
     //verification de tout les champs 
-
-
     let products = JSON.parse(localStorage.getItem('produits')) || [];
 
     let empty = document.querySelector('.empty');
